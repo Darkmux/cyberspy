@@ -125,6 +125,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/evilurl.sh
     elif [[ "${option}" == "cupp" ]]; then
         source ${intools}/cupp.sh
+    elif [[ "${option}" == "nmap" ]]; then
+        source ${intools}/nmap.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -177,6 +179,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/evilurl.sh
     elif [[ "${option}" == "cupp" ]]; then
         source ${rmtools}/cupp.sh
+    elif [[ "${option}" == "nmap" ]]; then
+        source ${rmtools}/nmap.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -229,6 +233,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/evilurl.sh
     elif [[ "${option}" == "cupp" ]]; then
         source ${settings}/retools/cupp.sh
+    elif [[ "${option}" == "nmap" ]]; then
+        source ${settings}/retools/nmap.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi

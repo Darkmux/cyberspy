@@ -1,0 +1,4 @@
+#!/bin/bash
+metagoofil="/data/data/com.termux/files/usr/opt/metagoofil"
+cd ${metagoofil}
+exec python3 "${metagoofil}/metagoofil.py" "$@"
