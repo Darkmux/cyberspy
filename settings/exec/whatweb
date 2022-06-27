@@ -1,0 +1,4 @@
+#!/bin/bash
+whatweb="/data/data/com.termux/files/usr/opt/WhatWeb"
+cd ${whatweb}
+exec ruby "${whatweb}/whatweb" "$@"

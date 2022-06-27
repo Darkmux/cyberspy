@@ -1,0 +1,4 @@
+#!/bin/bash
+beef="/data/data/com.termux/files/usr/opt/beef"
+cd ${beef}
+exec ruby "${beef}/beef" "$@"

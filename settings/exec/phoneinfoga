@@ -1,0 +1,4 @@
+#!/bin/bash
+phoneinfoga="/data/data/com.termux/files/usr/opt/PhoneInfoga"
+cd ${phoneinfoga}
+exec python3 "${phoneinfoga}/phoneinfoga.py" "$@"

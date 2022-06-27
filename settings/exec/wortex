@@ -1,0 +1,4 @@
+#!/bin/bash
+wortex="/data/data/com.termux/files/usr/opt/wortex"
+cd ${wortex}
+exec python3 "${wortex}/wortex.py" "$@"

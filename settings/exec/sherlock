@@ -1,0 +1,4 @@
+#!/bin/bash
+sherlock="/data/data/com.termux/files/usr/opt/sherlock/sherlock"
+cd ${sherlock}
+exec python3 "${sherlock}/sherlock.py" "$@"

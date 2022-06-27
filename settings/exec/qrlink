@@ -1,0 +1,4 @@
+#!/bin/bash
+qrlink="/data/data/com.termux/files/usr/opt/qrlink"
+cd ${qrlink}
+exec bash "${qrlink}/qrlink.sh" "$@"

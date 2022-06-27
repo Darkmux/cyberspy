@@ -1,0 +1,291 @@
+#!/bin/bash
+#
+# Execute: spy
+#
+# ==============================================
+#                  Variables
+# ==============================================
+spy="/data/data/com.termux/files/home/cyberspy"
+settings="/data/data/com.termux/files/home/cyberspy/settings"
+style="/data/data/com.termux/files/home/cyberspy/settings/style"
+execute="/data/data/com.termux/files/home/cyberspy/settings/exec"
+intools="/data/data/com.termux/files/home/cyberspy/settings/intools"
+rmtools="/data/data/com.termux/files/home/cyberspy/settings/rmtools"
+home="/data/data/com.termux/files/home"
+usr="/data/data/com.termux/files/usr"
+etc="/data/data/com.termux/files/usr/etc"
+bin="/data/data/com.termux/files/usr/bin"
+opt="/data/data/com.termux/files/usr/opt"
+share="/data/data/com.termux/files/usr/share"
+argument=$1
+option=$2
+# ==============================================
+#                  Light colors
+# ==============================================
+black="\e[1;30m"
+blue="\e[1;34m"
+green="\e[1;32m"
+cyan="\e[1;36m"
+red="\e[1;31m"
+purple="\e[1;35m"
+yellow="\e[1;33m"
+white="\e[1;37m"
+# ==============================================
+#                  Dark colors
+# ==============================================
+blackDark="\e[0;30m"
+blueDark="\e[0;34m"
+greenDark="\e[0;32m"
+cyanDark="\e[0;36m"
+redDark="\e[0;31m"
+purpleDark="\e[0;35m"
+yellowDark="\e[0;33m"
+whiteDark="\e[0;37m"
+# ==============================================
+#               Background colors
+# ==============================================
+blackBack=$(setterm -background black)
+blueBack=$(setterm -background blue)
+greenBack=$(setterm -background green)
+cyanBack=$(setterm -background cyan)
+redBack=$(setterm -background red)
+yellowBack=$(setterm -background yellow)
+whiteBack=$(setterm -background white)
+# ==============================================
+#            Specifying arguments
+# ==============================================
+if [[ "${argument}" == "update" ]]; then
+    echo -e ${red}"
+[${green}*${red}] ${green}Updating CyberSpy..."${white}
+    rm -rf ${spy}
+    git clone https://github.com/Darkmux/cyberspy ${spy}
+    cd ${spy}
+    chmod 777 *.sh
+    bash update.sh
+    echo -e ${red}"[${green}√${red}] ${green}CyberSpy Updated"${white}
+elif [[ "${argument}" == "style" ]]; then
+    if [[ "${option}" == "small" ]]; then
+	cp ${style}/spy.small.txt ${style}/spy.txt
+	cat ${style}/spy.txt
+    elif [[ "${option}" == "medium" ]]; then
+	cp ${style}/spy.medium.txt ${style}/spy.txt
+	cat ${style}/spy.txt
+    elif [[ "${option}" == "large" ]]; then
+	cp ${style}/spy.large.txt ${style}/spy.txt
+	cat ${style}/spy.txt
+    else
+	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
+    fi
+elif [[ "${argument}" == "install" ]]; then
+    if [[ "${option}" == "ncshare" ]]; then
+	source ${intools}/ncshare.sh
+    elif [[ "${option}" == "sherlock" ]]; then
+	source ${intools}/sherlock.sh
+    elif [[ "${option}" == "seeker" ]]; then
+	source ${intools}/seeker.sh
+    elif [[ "${option}" == "metasploit" ]]; then
+	source ${intools}/metasploit.sh
+    elif [[ "${option}" == "wortex" ]]; then
+	source ${intools}/wortex.sh
+    elif [[ "${option}" == "iphunter" ]]; then
+	source ${intools}/iphunter.sh
+    elif [[ "${option}" == "magmaosint" ]]; then
+	source ${intools}/magmaosint.sh
+    elif [[ "${option}" == "phoneinfoga" ]]; then
+	source ${intools}/phoneinfoga.sh
+    elif [[ "${option}" == "beef-xss" ]]; then
+	source ${intools}/beef-xss.sh
+    elif [[ "${option}" == "nikto" ]]; then
+	source ${intools}/nikto.sh
+    elif [[ "${option}" == "qrlink" ]]; then
+	source ${intools}/qrlink.sh
+    elif [[ "${option}" == "whatweb" ]]; then
+	source ${intools}/whatweb.sh
+    elif [[ "${option}" == "slowloris" ]]; then
+	source ${intools}/slowloris.sh
+    elif [[ "${option}" == "weeman" ]]; then
+	source ${intools}/weeman.sh
+    elif [[ "${option}" == "sqlmap" ]]; then
+	source ${intools}/sqlmap.sh
+    elif [[ "${option}" == "aquatone" ]]; then
+	source ${intools}/aquatone.sh
+    elif [[ "${option}" == "holehe" ]]; then
+	source ${intools}/holehe.sh
+    elif [[ "${option}" == "h8mail" ]]; then
+	source ${intools}/h8mail.sh
+    elif [[ "${option}" == "recon-ng" ]]; then
+	source ${intools}/recon-ng.sh
+    elif [[ "${option}" == "metagoofil" ]]; then
+	source ${intools}/metagoofil.sh
+    elif [[ "${option}" == "infoga" ]]; then
+        source ${intools}/infoga.sh
+    elif [[ "${option}" == "photon" ]]; then
+        source ${intools}/photon.sh
+    elif [[ "${option}" == "evilurl" ]]; then
+        source ${intools}/evilurl.sh
+    elif [[ "${option}" == "cupp" ]]; then
+        source ${intools}/cupp.sh
+    else
+	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
+    fi
+elif [[ "${argument}" == "remove" ]]; then
+    if [[ "${option}" == "ncshare" ]]; then
+	source ${rmtools}/ncshare.sh
+    elif [[ "${option}" == "sherlock" ]]; then
+	source ${rmtools}/sherlock.sh
+    elif [[ "${option}" == "seeker" ]]; then
+	source ${rmtools}/seeker.sh
+    elif [[ "${option}" == "metasploit" ]]; then
+	source ${rmtools}/metasploit.sh
+    elif [[ "${option}" == "wortex" ]]; then
+	source ${rmtools}/wortex.sh
+    elif [[ "${option}" == "iphunter" ]]; then
+	source ${rmtools}/iphunter.sh
+    elif [[ "${option}" == "magmaosint" ]]; then
+	source ${rmtools}/magmaosint.sh
+    elif [[ "${option}" == "phoneinfoga" ]]; then
+	source ${rmtools}/phoneinfoga.sh
+    elif [[ "${option}" == "beef-xss" ]]; then
+	source ${rmtools}/beef-xss.sh
+    elif [[ "${option}" == "nikto" ]]; then
+	source ${rmtools}/nikto.sh
+    elif [[ "${option}" == "qrlink" ]]; then
+	source ${rmtools}/qrlink.sh
+    elif [[ "${option}" == "whatweb" ]]; then
+	source ${rmtools}/whatweb.sh
+    elif [[ "${option}" == "slowloris" ]]; then
+	source ${rmtools}/slowloris.sh
+    elif [[ "${option}" == "weeman" ]]; then
+	source ${rmtools}/weeman.sh
+    elif [[ "${option}" == "sqlmap" ]]; then
+	source ${rmtools}/sqlmap.sh
+    elif [[ "${option}" == "aquatone" ]]; then
+	source ${rmtools}/aquatone.sh
+    elif [[ "${option}" == "holehe" ]]; then
+	source ${rmtools}/holehe.sh
+    elif [[ "${option}" == "h8mail" ]]; then
+	source ${rmtools}/h8mail.sh
+    elif [[ "${option}" == "recon-ng" ]]; then
+	source ${rmtools}/recon-ng.sh
+    elif [[ "${option}" == "metagoofil" ]]; then
+	source ${rmtools}/metagoofil.sh
+    elif [[ "${option}" == "infoga" ]]; then
+        source ${rmtools}/infoga.sh
+    elif [[ "${option}" == "photon" ]]; then
+        source ${rmtools}/photon.sh
+    elif [[ "${option}" == "evilurl" ]]; then
+        source ${rmtools}/evilurl.sh
+    elif [[ "${option}" == "cupp" ]]; then
+        source ${rmtools}/cupp.sh
+    else
+	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
+    fi
+elif [[ "${argument}" == "reinstall" ]]; then
+    if [[ "${option}" == "ncshare" ]]; then
+        source ${settings}/retools/ncshare.sh
+    elif [[ "${option}" == "sherlock" ]]; then
+        source ${settings}/retools/sherlock.sh
+    elif [[ "${option}" == "seeker" ]]; then
+	source ${settings}/retools/seeker.sh
+    elif [[ "${option}" == "metasploit" ]]; then
+	source ${settings}/retools/metasploit.sh
+    elif [[ "${option}" == "wortex" ]]; then
+	source ${settings}/retools/wortex.sh
+    elif [[ "${option}" == "iphunter" ]]; then
+	source ${settings}/retools/iphunter.sh
+    elif [[ "${option}" == "magmaosint" ]]; then
+	source ${settings}/retools/magmaosint.sh
+    elif [[ "${option}" == "phoneinfoga" ]]; then
+	source ${settings}/retools/phoneinfoga.sh
+    elif [[ "${option}" == "beef-xss" ]]; then
+	source ${settings}/retools/beef-xss.sh
+    elif [[ "${option}" == "nikto" ]]; then
+	source ${settings}/retools/nikto.sh
+    elif [[ "${option}" == "qrlink" ]]; then
+	source ${settings}/retools/qrlink.sh
+    elif [[ "${option}" == "whatweb" ]]; then
+	source ${settings}/retools/whatweb.sh
+    elif [[ "${option}" == "slowloris" ]]; then
+	source ${settings}/retools/slowloris.sh
+    elif [[ "${option}" == "weeman" ]]; then
+	source ${settings}/retools/weeman.sh
+    elif [[ "${option}" == "sqlmap" ]]; then
+	source ${settings}/retools/sqlmap.sh
+    elif [[ "${option}" == "aquatone" ]]; then
+	source ${settings}/retools/aquatone.sh
+    elif [[ "${option}" == "holehe" ]]; then
+	source ${settings}/retools/holehe.sh
+    elif [[ "${option}" == "h8mail" ]]; then
+	source ${settings}/retools/h8mail.sh
+    elif [[ "${option}" == "recon-ng" ]]; then
+	source ${settings}/retools/recon-ng.sh
+    elif [[ "${option}" == "metagoofil" ]]; then
+	source ${settings}/retools/metagoofil.sh
+    elif [[ "${option}" == "infoga" ]]; then
+        source ${settings}/retools/infoga.sh
+    elif [[ "${option}" == "photon" ]]; then
+        source ${settings}/retools/photon.sh
+    elif [[ "${option}" == "evilurl" ]]; then
+        source ${settings}/retools/evilurl.sh
+    elif [[ "${option}" == "cupp" ]]; then
+        source ${settings}/retools/cupp.sh
+    else
+        echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
+    fi
+elif [[ "${argument}" == "uninstall" ]]; then
+    source ${spy}/uninstall.sh
+    echo -e ${red}"[${green}√${red}] ${green}CyberSpy Uninstalled"${white}
+elif [[ "${argument}" == "help" ]]; then
+    echo -e ${blue}"
+[${white}√${blue}] ${white}CyberSpy Help
+
+spy ${blue}<${white}arguments${blue}> <${white}options${blue}>
+
+Arguments Available:
+
+$ ${white}spy help${blue}
+
+$ ${white}spy list ${blue}<${white}tools${blue}|${white}banners${blue}>
+
+$ ${white}spy update${blue}
+
+$ ${white}spy uninstall${blue}
+
+$ ${white}spy style ${blue}<${white}banner${blue}>
+
+$ ${white}spy install ${blue}<${white}tool${blue}>
+
+$ ${white}spy remove ${blue}<${white}tool${blue}>
+
+$ ${white}spy reinstall ${blue}<${white}tool${blue}>
+"${white}
+elif [[ "${argument}" == "list" ]]; then
+    if [[ "${option}" == "tools" ]]; then
+	names=$(ls ${execute})
+	echo "${names}" >> ${settings}/names.txt
+	num=$(cat ${settings}/names.txt | wc -l)
+	for (( i=1; i<=${num}; i++ ))
+	do
+	    nameTool=$(awk "NR ==${i}" ${settings}/names.txt)
+	    if [[ ${i} -ge 10 ]]; then
+		echo -e ${blue}"[${white}${i}${blue}] ${white}${nameTool}"
+		sleep 0.1
+	    else
+		echo -e ${blue}"[${white}0${i}${blue}] ${white}${nameTool}"
+		sleep 0.1
+	    fi
+	done
+	rm ${settings}/names.txt
+    elif [[ "${option}" == "banners" ]]; then
+	echo -e ${blue}"[${white}√${blue}] ${white}small"
+	sleep 0.1
+	echo -e ${blue}"[${white}√${blue}] ${white}medium"
+	sleep 0.1
+	echo -e ${blue}"[${white}√${blue}] ${white}large"
+	sleep 0.1
+    else
+	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
+    fi
+else
+    echo -e "${red}[${yello}!${red}] Invalid Argument"${white}
+fi

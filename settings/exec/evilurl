@@ -1,0 +1,4 @@
+#!/bin/bash
+evilurl="/data/data/com.termux/files/usr/opt/EvilURL"
+cd ${evilurl}
+exec python3 "${evilurl}/evilurl.py" "$@"

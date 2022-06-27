@@ -1,0 +1,14 @@
+#!/bin/bash
+
+nmap=$(command -v nmap)
+
+if [[ "${nmap}" == "" ]]; then
+    yes|pkg update && pkg upgrade
+    yes|pkg install nmap
+fi
+
+ipvt=$(ifconfig | grep -i "inet 192.168" | cut -d " " -f 10)
+num=$(echo "${ipvt}" | cut -d "." -f 3)
+gateway="192.168.${num}"
+echo -e "scanning wireless network..."
+nmap -P 192.168.${num}.1-254 | grep -i "for" | cut -d " " -f 5

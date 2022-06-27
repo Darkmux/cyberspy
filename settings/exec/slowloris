@@ -1,0 +1,4 @@
+#!/bin/bash
+slowloris="/data/data/com.termux/files/usr/opt/slowloris"
+cd ${slowloris}
+exec python3 "${slowloris}/slowloris.py" "$@"

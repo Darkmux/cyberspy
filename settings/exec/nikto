@@ -1,0 +1,4 @@
+#!/bin/bash
+nikto="/data/data/com.termux/files/usr/opt/nikto/program"
+cd ${nikto}
+exec perl "${nikto}/nikto.pl" "$@"

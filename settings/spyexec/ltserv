@@ -1,0 +1,12 @@
+#!/bin/bash
+
+lt=$(command -v lt)
+
+if [[ "${lt}" == "" ]]; then
+    yes|pkg update && pkg upgrade
+    yes|pkg install nodejs
+    npm install -g localtunnel
+    cp ~/cyberspy/settings/config/openurl.js /data/data/com.termux/files/usr/lib/node_modules/localtunnel/node_modules/openurl
+fi
+
+lt "$@"

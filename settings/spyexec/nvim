@@ -1,0 +1,17 @@
+#!/bin/bash
+
+vim=$(command -v vim)
+if [[ "${vim}" == "" ]]; then
+    yes|pkg install vim
+fi
+
+file=$@
+ext=$(echo "${file}" | cut -d "." -f 2)
+
+if [[ "${ext}" == "html" ]]; then
+    echo "set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab" > ~/.vimrc
+else
+    echo "set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab" > ~/.vimrc
+fi
+
+vim "$@"

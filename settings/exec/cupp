@@ -1,0 +1,4 @@
+#!/bin/bash
+cupp="/data/data/com.termux/files/usr/opt/cupp"
+cd ${cupp}
+exec python3 "${cupp}/cupp.py" "$@"

@@ -1,0 +1,4 @@
+#!/bin/bash
+NCShare="/data/data/com.termux/files/usr/opt/ncshare"
+cd ${NCShare}
+exec bash "${NCShare}/ncshare.sh" "$@"

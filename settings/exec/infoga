@@ -1,0 +1,4 @@
+#!/bin/bash
+infoga="/data/data/com.termux/files/usr/opt/Infoga"
+cd ${infoga}
+exec python3 "${infoga}/infoga.py" "$@"

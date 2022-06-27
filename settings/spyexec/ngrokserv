@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ngrok=$(command -v ngrok)
+
+if [[ "${ngrok}" == "" ]]; then
+    yes|pkg update && pkg upgrade
+    yes|pkg install wget
+    wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm.tgz -O /data/data/com.termux/files/usr/bin/ngrok-v3-stable-linux-arm.tgz
+    tar xzvf /data/data/com.termux/files/usr/bin/ngrok-v3-stable-linux-arm.tgz
+    rm /data/data/com.termux/files/usr/bin/ngrok-v3-stable-linux-arm.tgz
+    mv ngrok /data/data/com.termux/files/usr/bin
+    chmod 777 /data/data/com.termux/files/usr/bin/ngrok
+fi
+
+ngrok "$@"

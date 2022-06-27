@@ -1,0 +1,4 @@
+#!/bin/bash
+seeker="/data/data/com.termux/files/usr/opt/seeker"
+cd ${seeker}
+exec python3 "${seeker}/seeker.py" "$@"

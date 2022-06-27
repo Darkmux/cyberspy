@@ -1,0 +1,4 @@
+#!/bin/bash
+photon="/data/data/com.termux/files/usr/opt/Photon"
+cd ${photon}
+exec python3 "${photon}/photon.py" "$@"

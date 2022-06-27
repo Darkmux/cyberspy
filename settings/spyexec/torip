@@ -1,0 +1,32 @@
+#!/bin/bash
+
+tor=$(command -v tor)
+torsocks=$(command -v torsocks)
+proxychains4=$(command -v proxychains4)
+w3m=$(command -v w3m)
+
+if [[ "${tor}" == "" ]]; then
+    yes|pkg update && pkg upgrade
+    yes|pkg install tor
+fi
+if [[ "${torsocks}" == "" ]]; then
+    yes|pkg update && pkg upgrade
+    yes|pkg install torsocks
+fi
+if [[ "${proxychains4}" == "" ]]; then
+    yes|pkg update && pkg upgrade
+    yes|pkg install proxychains-ng
+fi
+if [[ "${w3m}" == "" ]]; then
+    yes|pkg update && pkg upgrade
+    yes|pkg install w3m
+fi
+
+checktor=$(curl --socks5-hostname localhost:9050 -s https://www.google.com > /dev/null; echo $?)
+
+if [[ "${checktor}" -gt "0" ]]; then
+    echo -e "You must first connect to the tor network."
+    exit
+else
+    proxychains4 curl ifconfig.so
+fi

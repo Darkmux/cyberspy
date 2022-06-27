@@ -1,0 +1,4 @@
+#!/bin/bash
+reconng="/data/data/com.termux/files/usr/opt/recon-ng"
+cd ${reconng}
+exec python3 "${reconng}/recon-ng" "$@"

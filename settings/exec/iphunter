@@ -1,0 +1,4 @@
+#!/bin/bash
+iphunter="/data/data/com.termux/files/usr/opt/iphunter"
+cd ${iphunter}
+exec python3 "${iphunter}/iphunter.py" "$@"

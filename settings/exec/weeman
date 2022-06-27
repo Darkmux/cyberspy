@@ -1,0 +1,4 @@
+#!/bin/bash
+weeman="/data/data/com.termux/files/usr/opt/weeman"
+cd ${weeman}
+exec python2 "${weeman}/weeman.py" "$@"

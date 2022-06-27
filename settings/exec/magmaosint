@@ -1,0 +1,4 @@
+#!/bin/bash
+magmaosint="/data/data/com.termux/files/usr/opt/MagmaOsint"
+cd ${magmaosint}
+exec python3 "${magmaosint}/osint.py" "$@"
