@@ -1,0 +1,4 @@
+#!/bin/bash
+nexfil="/data/data/com.termux/files/usr/opt/nexfil"
+cd ${nexfil}
+exec python3 "${nexfil}/nexfil.py" "$@"

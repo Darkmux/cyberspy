@@ -79,8 +79,8 @@ elif [[ "${argument}" == "style" ]]; then
 elif [[ "${argument}" == "install" ]]; then
     if [[ "${option}" == "ncshare" ]]; then
 	source ${intools}/ncshare.sh
-    elif [[ "${option}" == "sherlock" ]]; then
-	source ${intools}/sherlock.sh
+    elif [[ "${option}" == "nexfil" ]]; then
+	source ${intools}/nexfil.sh
     elif [[ "${option}" == "seeker" ]]; then
 	source ${intools}/seeker.sh
     elif [[ "${option}" == "metasploit" ]]; then
@@ -127,14 +127,16 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/cupp.sh
     elif [[ "${option}" == "nmap" ]]; then
         source ${intools}/nmap.sh
+    elif [[ "${option}" == "pwnedornot" ]]; then
+        source ${intools}/pwnedornot.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
 elif [[ "${argument}" == "remove" ]]; then
     if [[ "${option}" == "ncshare" ]]; then
 	source ${rmtools}/ncshare.sh
-    elif [[ "${option}" == "sherlock" ]]; then
-	source ${rmtools}/sherlock.sh
+    elif [[ "${option}" == "nexfil" ]]; then
+	source ${rmtools}/nexfil.sh
     elif [[ "${option}" == "seeker" ]]; then
 	source ${rmtools}/seeker.sh
     elif [[ "${option}" == "metasploit" ]]; then
@@ -181,14 +183,16 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/cupp.sh
     elif [[ "${option}" == "nmap" ]]; then
         source ${rmtools}/nmap.sh
+    elif [[ "${option}" == "pwnedornot" ]]; then
+        source ${rmtools}/pwnedornot.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
 elif [[ "${argument}" == "reinstall" ]]; then
     if [[ "${option}" == "ncshare" ]]; then
         source ${settings}/retools/ncshare.sh
-    elif [[ "${option}" == "sherlock" ]]; then
-        source ${settings}/retools/sherlock.sh
+    elif [[ "${option}" == "nexfil" ]]; then
+        source ${settings}/retools/nexfil.sh
     elif [[ "${option}" == "seeker" ]]; then
 	source ${settings}/retools/seeker.sh
     elif [[ "${option}" == "metasploit" ]]; then
@@ -235,6 +239,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/cupp.sh
     elif [[ "${option}" == "nmap" ]]; then
         source ${settings}/retools/nmap.sh
+    elif [[ "${option}" == "pwnedornot" ]]; then
+        source ${settings}/retools/pwnedornot.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi

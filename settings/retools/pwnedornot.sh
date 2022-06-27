@@ -66,25 +66,21 @@ redBack=$(setterm -background red)
 yellowBack=$(setterm -background yellow)
 whiteBack=$(setterm -background white)
 # ==============================================
-#                 Removing Tool
+#             Installing Tool
 # ==============================================
-function removing() {
-    if [ -x ${bin}/sherlock ]; then
-	echo -e ${red}"
-[${green}*${red}] ${green}Removing sherlock..."${white}
-        rm -rf ${opt}/sherlock
-        rm ${bin}/sherlock
-        echo -e ${red}"
-[${green}√${red}] ${green}Removal Completed"${white}
+function installing() {
+    if [ -x ${bin}/pwnedornot ]; then
+        spy remove pwnedornot
+        spy install pwnedornot
     else
 	echo -e ${red}"
-[${yellow}!${red}] Not Installed"${white}
+[${yellow}!${red}] ${red}Not Installed"${white}
     fi
 }
 # ==============================================
 #              Declaring functions
 # ==============================================
-removing
+installing
 # ==============================================
 #    Created by: @Darkmux - WHITE HACKS ©2022
 # ==============================================

@@ -69,12 +69,26 @@ whiteBack=$(setterm -background white)
 #             Installing Tool
 # ==============================================
 function installing() {
-    if [ -x ${bin}/sherlock ]; then
-        spy remove sherlock
-        spy install sherlock
+    if [ ! -x ${bin}/nexfil ]; then
+	echo -e ${red}"
+[${green}*${red}] ${green}Installing nexfil..."${white}
+        yes|pkg update && pkg upgrade
+        yes|pkg install python
+        python3 -m pip install --upgrade pip
+        git clone https://github.com/thewhiteh4t/nexfil ${opt}/nexfil
+        cd ${opt}/nexfil
+        python3 -m pip install -r requirements.txt
+        cp ${execute}/nexfil ${bin}
+        chmod 777 ${bin}/nexfil
+        echo -e ${red}"
+[${green}√${red}] ${green}Installation Finished, Please Execute:${white}
+
+nexfil <USERNAME>
+
+"
     else
 	echo -e ${red}"
-[${yellow}!${red}] ${red}Not Installed"${white}
+[${green}*${red}] ${green}Already Installed"${white}
     fi
 }
 # ==============================================

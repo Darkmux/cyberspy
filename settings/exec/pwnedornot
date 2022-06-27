@@ -1,0 +1,4 @@
+#!/bin/bash
+pwnedornot="/data/data/com.termux/files/usr/opt/pwnedOrNot"
+cd ${pwnedornot}
+exec python3 "${pwnedornot}/pwnedornot.py" "$@"
