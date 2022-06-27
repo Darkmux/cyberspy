@@ -129,6 +129,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/nmap.sh
     elif [[ "${option}" == "pwnedornot" ]]; then
         source ${intools}/pwnedornot.sh
+    elif [[ "${option}" == "speedtest" ]]; then
+        source ${intools}/speedtest.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -185,6 +187,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/nmap.sh
     elif [[ "${option}" == "pwnedornot" ]]; then
         source ${rmtools}/pwnedornot.sh
+    elif [[ "${option}" == "speedtest" ]]; then
+        source ${rmtools}/speedtest.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -241,6 +245,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/nmap.sh
     elif [[ "${option}" == "pwnedornot" ]]; then
         source ${settings}/retools/pwnedornot.sh
+    elif [[ "${option}" == "speedtest" ]]; then
+        source ${settings}/retools/speedtest.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
