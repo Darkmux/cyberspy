@@ -83,7 +83,7 @@ function installing() {
         echo -e ${red}"
 [${green}√${red}] ${green}Installation Finished, Please Execute:${white}
 
-nexfil <USERNAME>
+nexfil <ARGUMENTS>
 
 "
     else
