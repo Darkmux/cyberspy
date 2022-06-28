@@ -131,6 +131,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/pwnedornot.sh
     elif [[ "${option}" == "speedtest" ]]; then
         source ${intools}/speedtest.sh
+    elif [[ "${option}" == "dirb" ]]; then
+        source ${intools}/dirb.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -189,6 +191,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/pwnedornot.sh
     elif [[ "${option}" == "speedtest" ]]; then
         source ${rmtools}/speedtest.sh
+    elif [[ "${option}" == "dirb" ]]; then
+        source ${rmtools}/dirb.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -247,6 +251,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/pwnedornot.sh
     elif [[ "${option}" == "speedtest" ]]; then
         source ${settings}/retools/speedtest.sh
+    elif [[ "${option}" == "dirb" ]]; then
+        source ${settings}/retools/dirb.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
