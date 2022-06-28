@@ -133,6 +133,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/speedtest.sh
     elif [[ "${option}" == "dirb" ]]; then
         source ${intools}/dirb.sh
+    elif [[ "${option}" == "crunch" ]]; then
+        source ${intools}/crunch.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -193,6 +195,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/speedtest.sh
     elif [[ "${option}" == "dirb" ]]; then
         source ${rmtools}/dirb.sh
+    elif [[ "${option}" == "crunch" ]]; then
+        source ${rmtools}/crunch.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -253,6 +257,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/speedtest.sh
     elif [[ "${option}" == "dirb" ]]; then
         source ${settings}/retools/dirb.sh
+    elif [[ "${option}" == "crunch" ]]; then
+        source ${settings}/retools/crunch.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
