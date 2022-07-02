@@ -1,8 +1,8 @@
-# CyberSpy - Espía Cibernético
+# CyberSky
 Hacking Tool Suite for Android in Termux **(No root)**
 > This tool can only be executed in Termux.
 ## Preview in Termux
-![CyberSpy](https://github.com/Darkmux/cyberspy/blob/main/images/CyberSpy.png)
+![CyberSky](https://github.com/Darkmux/cybersky/blob/main/images/CyberSpy.png)
 ## Requirements
 * Updated Termux application.
 * Android 7 or higher.
@@ -25,11 +25,11 @@ yes|pkg install git
 ```
 > Clone github repository.
 ```bash
-git clone https://github.com/Darkmux/cyberspy
+git clone https://github.com/Darkmux/cybersky
 ```
-> Access the cloned "cyberspy" folder.
+> Access the cloned "cybersky" folder.
 ```bash
-cd cyberspy
+cd cybersky
 ```
 > Grant execute permissions to all files with extension (.sh).
 ```bash
@@ -37,12 +37,12 @@ chmod 777 *.sh
 ```
 > Run the installer.
 ```bash
-bash cyberspy.sh
+bash cybersky.sh
 ```
 ## New Commands Available
 > The main command is `spy` which is used along with its arguments for it to work properly:
 ## Arguments Available
-> Shows a help menu on the use of cyberspy in the terminal.
+> Shows a help menu on the use of cybersky in the terminal.
 ```bash
 spy help
 ```
@@ -50,11 +50,11 @@ spy help
 ```bash
 spy list <tools|banners>
 ```
-> Find and update CyberSpy to its latest version.  (Run it whenever they enter the terminal).
+> Find and update CyberSky to its latest version.  (Run it whenever they enter the terminal).
 ```bash
 spy update
 ```
-> Completely uninstall CyberSpy and go back to the default Termux (only use it if you don't like cyberspy).
+> Completely uninstall CyberSky and go back to the default Termux (only use it if you don't like cybersky).
 ```bash
 spy uninstall
 ```
