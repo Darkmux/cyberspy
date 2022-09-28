@@ -75,12 +75,10 @@ function installing() {
         yes|pkg update && pkg upgrade
 	yes|pkg install curl
 	yes|pkg install wget
-        git clone https://github.com/Scorpio28-Oficial/MSF ${home}/MSF
-        cd ${home}/MSF
-	chmod 777 metasploit.sh
-        bash metasploit.sh
-	cd ${home}
-	rm -rf MSF
+        wget https://github.com/gushmazuko/metasploit_in_termux/raw/master/metasploit.sh -O ~/metasploit.sh
+	chmod 777 ~/metasploit.sh
+        bash ~/metasploit.sh
+	rm -rf metasploit.sh
         echo -e ${red}"
 [${green}√${red}] ${green}Installation Finished, Please Execute:${white}
 

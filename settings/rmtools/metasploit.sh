@@ -73,7 +73,7 @@ function removing() {
 	echo -e ${red}"
 [${green}*${red}] ${green}Removing metasploit-framework..."${white}
 	yes|pkg uninstall ruby
-        rm -rf ${home}/metasploit-framework
+        rm -rf ${opt}/metasploit-framework
         rm ${bin}/msfconsole
 	rm ${bin}/msfvenom
         echo -e ${red}"
