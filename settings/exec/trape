@@ -1,0 +1,4 @@
+#!/bin/bash
+trape="/data/data/com.termux/files/usr/opt/trape"
+cd ${trape}
+exec python3 "${trape}/trape.py" "$@"
