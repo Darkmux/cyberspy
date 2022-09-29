@@ -135,6 +135,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/dirb.sh
     elif [[ "${option}" == "crunch" ]]; then
         source ${intools}/crunch.sh
+    elif [[ "${option}" == "email2pn" ]]; then
+        source ${intools}/email2pn.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -197,6 +199,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/dirb.sh
     elif [[ "${option}" == "crunch" ]]; then
         source ${rmtools}/crunch.sh
+    elif [[ "${option}" == "email2pn" ]]; then
+        source ${rmtools}/email2pn.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -259,6 +263,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/dirb.sh
     elif [[ "${option}" == "crunch" ]]; then
         source ${settings}/retools/crunch.sh
+    elif [[ "${option}" == "email2pn" ]]; then
+        source ${settings}/retools/email2pn.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi

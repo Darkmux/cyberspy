@@ -1,0 +1,4 @@
+#!/bin/bash
+email2pn="/data/data/com.termux/files/usr/opt/email2phonenumber"
+cd ${email2pn}
+exec python3 "${email2pn}/email2phonenumber.py" "$@"
