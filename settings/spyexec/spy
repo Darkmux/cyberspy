@@ -139,6 +139,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/email2pn.sh
     elif [[ "${option}" == "trape" ]]; then
         source ${intools}/trape.sh
+    elif [[ "${option}" == "redhawk" ]]; then
+        source ${intools}/redhawk.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -205,6 +207,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/email2pn.sh
     elif [[ "${option}" == "trape" ]]; then
         source ${rmtools}/trape.sh
+    elif [[ "${options}" == "redhawk" ]]; then
+        source ${rmtools}/redhawk.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -271,6 +275,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/email2pn.sh
     elif [[ "${option}" == "trape" ]]; then
         source ${settings}/retools/trape.sh
+    elif [[ "${option}" == "redhawk" ]]; then
+        source ${settings}/retools/redhawk.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi

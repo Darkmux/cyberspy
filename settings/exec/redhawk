@@ -1,0 +1,4 @@
+#!/bin/bash
+redhawk="/data/data/com.termux/files/usr/opt/RED_HAWK"
+cd ${redhawk}
+exec php "${redhawk}/rhawk.php" "$@"
