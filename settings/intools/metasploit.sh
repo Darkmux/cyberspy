@@ -73,6 +73,21 @@ function installing() {
 	echo -e ${red}"
 [${green}*${red}] ${green}Installing metasploit-framework..."${white}
         yes|pkg update && pkg upgrade
+        yes|pkg uninstall ruby
+
+        if [ -d ${home}/metasploit-framework ]; then
+            rm -rf ${home}/metasploit-framework
+        fi
+        if [ -d ${opt}/metasploit-framework ]; then
+            rm -rf ${opt}/metasploit-framework
+        fi
+        if [ -x ${bin}/msfconsole ]; then
+            rm ${bin}/msfconsole
+        fi
+        if [ -x ${bin}/msfvenom ]; then
+            rm ${bin}/msfvenom
+        fi
+
 	yes|pkg install curl
 	yes|pkg install wget
         wget https://github.com/gushmazuko/metasploit_in_termux/raw/master/metasploit.sh -O ~/metasploit.sh

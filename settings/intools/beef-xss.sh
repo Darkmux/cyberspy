@@ -76,6 +76,14 @@ function installing() {
 	yes|pkg install nodejs
         yes|pkg install wget
 	spy install metasploit
+        mkdir -p ${usr}/etc/apt/sources.list.d
+        wget https://raw.githubusercontent.com/ivam3/termux-packages/gh-pages/ivam3-termux-packages.list -O ${usr}/etc/apt/sources.list.d/ivam3-termux-packages.list
+        apt update && apt upgrade
+        apt install beef
+        rm -rf ${home}/.local/share/beef
+        rm ${bin}/beef
+        rm -rf ${usr}/etc/apt/sources.list.d
+        apt update && apt upgrade
         git clone https://github.com/beefproject/beef ${opt}/beef
         cd ${opt}/beef
 	bundle install
