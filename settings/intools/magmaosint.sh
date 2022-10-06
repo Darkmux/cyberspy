@@ -75,7 +75,9 @@ function installing() {
         yes|pkg update && pkg upgrade
         yes|pkg install python
         yes|pkg install wget
-        pip install --upgrade pip
+        python3 -m pip install --upgrade pip
+        python3 -m pip install fuzzywuzzy
+        python3 -m pip install requests
         wget https://raw.githubusercontent.com/Darkmux/phoenix-packages/main/tools/MagmaOsint.zip -O ${settings}/lctools/MagmaOsint.zip
 	cd ${settings}/lctools
 	unzip MagmaOsint.zip
