@@ -73,15 +73,13 @@ function installing() {
 	echo -e ${red}"
 [${green}*${red}] ${green}Installing hydra..."${white}
         yes|pkg update && pkg upgrade
-        yes|pkg install python
+        yes|pkg install python clang
         python3 -m pip install --upgrade pip
         git clone https://github.com/vanhauser-thc/thc-hydra ${opt}/thc-hydra
         cd ${opt}/thc-hydra
-	./configure
+	./configure --prefix=$PREFIX
         make
         make install
-        cp ${execute}/hydra ${bin}
-        chmod 777 ${bin}/hydra
         echo -e ${red}"
 [${green}√${red}] ${green}Installation Finished, Please Execute:${white}
 
