@@ -141,6 +141,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/trape.sh
     elif [[ "${option}" == "redhawk" ]]; then
         source ${intools}/redhawk.sh
+    elif [[ "${option}" == "hydra" ]]; then
+        source ${intools}/hydra.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -209,6 +211,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/trape.sh
     elif [[ "${options}" == "redhawk" ]]; then
         source ${rmtools}/redhawk.sh
+    elif [[ "${options}" == "hydra" ]]; then
+        source ${rmtools}/hydra.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -277,6 +281,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/trape.sh
     elif [[ "${option}" == "redhawk" ]]; then
         source ${settings}/retools/redhawk.sh
+    elif [[ "${option}" == "hydra" ]]; then
+        source ${settings}/retools/hydra.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi

@@ -1,0 +1,4 @@
+#!/bin/bash
+hydra="/data/data/com.termux/files/usr/opt/thc-hydra"
+cd ${hydra}
+exec ./ "${hydra}/hydra" "$@"
