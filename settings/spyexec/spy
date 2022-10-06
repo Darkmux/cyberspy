@@ -209,9 +209,9 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/email2pn.sh
     elif [[ "${option}" == "trape" ]]; then
         source ${rmtools}/trape.sh
-    elif [[ "${options}" == "redhawk" ]]; then
+    elif [[ "${option}" == "redhawk" ]]; then
         source ${rmtools}/redhawk.sh
-    elif [[ "${options}" == "hydra" ]]; then
+    elif [[ "${option}" == "hydra" ]]; then
         source ${rmtools}/hydra.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
