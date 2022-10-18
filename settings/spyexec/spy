@@ -147,6 +147,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/ecuador-id.sh
     elif [[ "${option}" == "phone-dox" ]]; then
         source ${intools}/phone-dox.sh
+    elif [[ "${option}" == "vector" ]]; then
+        source ${intools}/vector.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -221,6 +223,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/ecuador-id.sh
     elif [[ "${option}" == "phone-dox" ]]; then
         source ${rmtools}/phone-dox.sh
+    elif [[ "${option}" == "vector" ]]; then
+        source ${rmtools}/vector.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -295,6 +299,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/ecuador-id.sh
     elif [[ "${option}" == "phone-dox" ]]; then
         source ${settings}/retools/phone-dox.sh
+    elif [[ "${option}" == "vector" ]]; then
+        source ${settings}/retools/vector.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi

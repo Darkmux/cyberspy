@@ -1,0 +1,4 @@
+#!/bin/bash
+vector="/data/data/com.termux/files/usr/opt/vector"
+cd ${vector}
+exec python3 "${vector}/vector.py" "$@"
