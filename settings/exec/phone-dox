@@ -1,0 +1,4 @@
+#!/bin/bash
+PhoneDox="/data/data/com.termux/files/usr/opt/Phone-dox"
+cd ${PhoneDox}
+exec python3 "${PhoneDox}/phone.py" "$@"

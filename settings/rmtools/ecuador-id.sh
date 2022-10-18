@@ -66,34 +66,25 @@ redBack=$(setterm -background red)
 yellowBack=$(setterm -background yellow)
 whiteBack=$(setterm -background white)
 # ==============================================
-#             Installing Tool
+#                 Removing Tool
 # ==============================================
-function installing() {
-    if [ ! -x ${bin}/ncshare ]; then
+function removing() {
+    if [ -x ${bin}/ecuador-id ]; then
 	echo -e ${red}"
-[${green}*${red}] ${green}Installing ncshare..."${white}
-	yes|pkg update && pkg upgrade
-        yes|pkg install nmap netcat-openbsd
-        git clone https://github.com/whitehacks00/ncshare ${opt}/ncshare
-        cd ${opt}/ncshare
-        chmod 777 *.sh
-        cp ${execute}/ncshare ${bin}
-        chmod 777 ${bin}/ncshare
+[${green}*${red}] ${green}Removing ecuador-id..."${white}
+        rm -rf ${opt}/Ecuador-ID
+        rm ${bin}/ecuador-id
         echo -e ${red}"
-[${green}√${red}] ${green}Installation Finished, Please Execute:${white}
-
-ncshare
-
-"
+[${green}√${red}] ${green}Removal Completed"${white}
     else
 	echo -e ${red}"
-[${green}*${red}] ${green}Already Installed"${white}
+[${yellow}!${red}] Not Installed"${white}
     fi
 }
 # ==============================================
 #              Declaring functions
 # ==============================================
-installing
+removing
 # ==============================================
 #    Created by: @Darkmux - WHITE HACKS ©2022
 # ==============================================

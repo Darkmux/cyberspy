@@ -69,20 +69,26 @@ whiteBack=$(setterm -background white)
 #             Installing Tool
 # ==============================================
 function installing() {
-    if [ ! -x ${bin}/ncshare ]; then
+    if [ ! -x ${bin}/ecuador-id ]; then
 	echo -e ${red}"
-[${green}*${red}] ${green}Installing ncshare..."${white}
-	yes|pkg update && pkg upgrade
-        yes|pkg install nmap netcat-openbsd
-        git clone https://github.com/whitehacks00/ncshare ${opt}/ncshare
-        cd ${opt}/ncshare
-        chmod 777 *.sh
-        cp ${execute}/ncshare ${bin}
-        chmod 777 ${bin}/ncshare
+[${green}*${red}] ${green}Installing ecuador-id..."${white}
+        yes|pkg update && pkg upgrade
+        yes|pkg install python
+        yes|pkg install wget
+        python3 -m pip install --upgrade pip
+        wget https://raw.githubusercontent.com/Darkmux/phoenix-packages/main/tools/Ecuador-ID.zip -O ${settings}/lctools/Ecuador-ID.zip
+	cd ${settings}/lctools
+	unzip Ecuador-ID.zip
+	mv Ecuador-ID ${opt}
+        rm -rf Ecuador-ID.zip
+        cd ${opt}/Ecuador-ID
+        python3 -m pip install tabulate
+        cp ${execute}/ecuador-id ${bin}
+        chmod 777 ${bin}/ecuador-id
         echo -e ${red}"
 [${green}√${red}] ${green}Installation Finished, Please Execute:${white}
 
-ncshare
+ecuador-id
 
 "
     else

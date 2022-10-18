@@ -1,0 +1,4 @@
+#!/bin/bash
+EcuadorID="/data/data/com.termux/files/usr/opt/Ecuador-ID"
+cd ${EcuadorID}
+exec python3 "${EcuadorID}/Ecuador-ID.py" "$@"

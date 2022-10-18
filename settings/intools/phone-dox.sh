@@ -69,20 +69,26 @@ whiteBack=$(setterm -background white)
 #             Installing Tool
 # ==============================================
 function installing() {
-    if [ ! -x ${bin}/ncshare ]; then
+    if [ ! -x ${bin}/phone-dox ]; then
 	echo -e ${red}"
-[${green}*${red}] ${green}Installing ncshare..."${white}
-	yes|pkg update && pkg upgrade
-        yes|pkg install nmap netcat-openbsd
-        git clone https://github.com/whitehacks00/ncshare ${opt}/ncshare
-        cd ${opt}/ncshare
-        chmod 777 *.sh
-        cp ${execute}/ncshare ${bin}
-        chmod 777 ${bin}/ncshare
+[${green}*${red}] ${green}Installing phone-dox..."${white}
+        yes|pkg update && pkg upgrade
+        yes|pkg install python
+        yes|pkg install wget
+        python3 -m pip install --upgrade pip
+        wget https://raw.githubusercontent.com/Darkmux/phoenix-packages/main/tools/Phone-dox.zip -O ${settings}/lctools/Phone-dox.zip
+	cd ${settings}/lctools
+	unzip Phone-dox.zip
+	mv Phone-dox ${opt}
+        rm -rf Phone-dox.zip
+        cd ${opt}/Phone-dox
+        python3 -m pip install -r requirements.txt
+        cp ${execute}/phone-dox ${bin}
+        chmod 777 ${bin}/phone-dox
         echo -e ${red}"
 [${green}√${red}] ${green}Installation Finished, Please Execute:${white}
 
-ncshare
+phone-dox <ARGUMENTS>
 
 "
     else

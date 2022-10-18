@@ -143,6 +143,10 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/redhawk.sh
     elif [[ "${option}" == "hydra" ]]; then
         source ${intools}/hydra.sh
+    elif [[ "${option}" == "ecuador-id" ]]; then
+        source ${intools}/ecuador-id.sh
+    elif [[ "${option}" == "phone-dox" ]]; then
+        source ${intools}/phone-dox.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -213,6 +217,10 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/redhawk.sh
     elif [[ "${option}" == "hydra" ]]; then
         source ${rmtools}/hydra.sh
+    elif [[ "${option}" == "ecuador-id" ]]; then
+        source ${rmtools}/ecuador-id.sh
+    elif [[ "${option}" == "phone-dox" ]]; then
+        source ${rmtools}/phone-dox.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -283,6 +291,10 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/redhawk.sh
     elif [[ "${option}" == "hydra" ]]; then
         source ${settings}/retools/hydra.sh
+    elif [[ "${option}" == "ecuador-id" ]]; then
+        source ${settings}/retools/ecuador-id.sh
+    elif [[ "${option}" == "phone-dox" ]]; then
+        source ${settings}/retools/phone-dox.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
