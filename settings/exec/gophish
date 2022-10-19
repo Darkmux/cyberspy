@@ -1,0 +1,4 @@
+#!/bin/bash
+gophish="/data/data/com.termux/files/usr/opt/gophish"
+cd ${gophish}
+exec go "${gophish}/gophish" "$@"

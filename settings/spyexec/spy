@@ -153,6 +153,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/routersploit.sh
     elif [[ "${option}" == "sherlock" ]]; then
         source ${intools}/sherlock.sh
+    elif [[ "${option}" == "gophish" ]]; then
+        source ${intools}/gophish.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -233,6 +235,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/routersploit.sh
     elif [[ "${optiom}" == "sherlock" ]]; then
         source ${rmtools}/sherlock.sh
+    elif [[ "${option}" == "gophish" ]]; then
+        source ${rmtools}/gophish.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -313,6 +317,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/routersploit.sh
     elif [[ "${option}" == "sherlock" ]]; then
         source ${settings}/retools/sherlock.sh
+    elif [[ "${option}" == "gophish" ]]; then
+        source ${settings}/retools/gophish.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
