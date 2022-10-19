@@ -76,6 +76,8 @@ function installing() {
     yes|pkg install curl
     yes|pkg install wget
     yes|pkg install fish
+    yes|pkg install ruby
+    gem install lolcat
     yes|pkg install openssl-tool
     yes|pkg install termux-tools
 }

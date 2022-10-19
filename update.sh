@@ -74,6 +74,7 @@ function updating() {
     yes|pkg update && pkg upgrade
     yes|pkg install ruby
     gem install lolcat
+    cp ${style}/bash.bashrc ${etc}
     cd ${execute}
     chmod 777 *
     cd ${intools}
