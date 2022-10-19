@@ -22,7 +22,7 @@ if [ -x /data/data/com.termux/files/usr/libexec/termux/command-not-found ]; then
 		/data/data/com.termux/files/usr/libexec/termux/command-not-found "$1"
 	}
 fi
-cat /data/data/com.termux/files/home/cyberspy/settings/style/spy.txt
+cat /data/data/com.termux/files/home/cyberspy/settings/style/spy.txt | lolcat
 alias bye='exit;exit'
 fish
 bye

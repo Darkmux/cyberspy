@@ -72,6 +72,8 @@ function updating() {
     echo -e ${red}"
 [${green}*${red}] ${green}Installing updates..."${white}
     yes|pkg update && pkg upgrade
+    yes|pkg install ruby
+    gem install lolcat
     cd ${execute}
     chmod 777 *
     cd ${intools}

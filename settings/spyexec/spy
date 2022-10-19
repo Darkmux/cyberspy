@@ -66,13 +66,13 @@ if [[ "${argument}" == "update" ]]; then
 elif [[ "${argument}" == "style" ]]; then
     if [[ "${option}" == "small" ]]; then
 	cp ${style}/spy.small.txt ${style}/spy.txt
-	cat ${style}/spy.txt
+	cat ${style}/spy.txt | lolcat
     elif [[ "${option}" == "medium" ]]; then
 	cp ${style}/spy.medium.txt ${style}/spy.txt
-	cat ${style}/spy.txt
+	cat ${style}/spy.txt | lolcat
     elif [[ "${option}" == "large" ]]; then
 	cp ${style}/spy.large.txt ${style}/spy.txt
-	cat ${style}/spy.txt
+	cat ${style}/spy.txt | lolcat
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
