@@ -149,6 +149,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/phone-dox.sh
     elif [[ "${option}" == "vector" ]]; then
         source ${intools}/vector.sh
+    elif [[ "${option}" == "routersploit" ]]; then
+        source ${intools}/routersploit.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -225,6 +227,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/phone-dox.sh
     elif [[ "${option}" == "vector" ]]; then
         source ${rmtools}/vector.sh
+    elif [[ "${option}" == "routersploit" ]]; then
+        source ${rmtools}/routersploit.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -301,6 +305,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/phone-dox.sh
     elif [[ "${option}" == "vector" ]]; then
         source ${settings}/retools/vector.sh
+    elif [[ "${option}" == "routersploit" ]]; then
+        source ${settings}/retools/routersploit.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -349,11 +355,11 @@ elif [[ "${argument}" == "list" ]]; then
 	done
 	rm ${settings}/names.txt
     elif [[ "${option}" == "banners" ]]; then
-	echo -e ${blue}"[${white}√${blue}] ${white}small"
+	echo -e ${blue}"[${white}01${blue}] ${white}small"
 	sleep 0.1
-	echo -e ${blue}"[${white}√${blue}] ${white}medium"
+	echo -e ${blue}"[${white}02${blue}] ${white}medium"
 	sleep 0.1
-	echo -e ${blue}"[${white}√${blue}] ${white}large"
+	echo -e ${blue}"[${white}03${blue}] ${white}large"
 	sleep 0.1
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}

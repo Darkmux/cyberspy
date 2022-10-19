@@ -1,0 +1,4 @@
+#!/bin/bash
+routersploit="/data/data/com.termux/files/usr/opt/routersploit"
+cd ${routersploit}
+exec python3 "${routersploit}/rsf.py" "$@"
