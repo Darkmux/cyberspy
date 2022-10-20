@@ -167,6 +167,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/john.sh
     elif [[ "${option}" == "recondog" ]]; then
         source ${intools}/recondog.sh
+    elif [[ "${option}" == "credmap" ]]; then
+        source ${intools}/credmap.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -261,6 +263,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/john.sh
     elif [[ "${option}" == "recondog" ]]; then
         source ${rmtools}/recondog.sh
+    elif [[ "${option}" == "credmap" ]]; then
+        source ${rmtools}/credmap.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -355,6 +359,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/john.sh
     elif [[ "${option}" == "recondog" ]]; then
         source ${settings}/retools/recondog.sh
+    elif [[ "${option}" == "credmap" ]]; then
+        source ${settings}/retools/credmap.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
