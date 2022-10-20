@@ -165,6 +165,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/ghost.sh
     elif [[ "${option}" == "john" ]]; then
         source ${intools}/john.sh
+    elif [[ "${option}" == "recondog" ]]; then
+        source ${intools}/recondog.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -257,6 +259,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/ghost.sh
     elif [[ "${option}" == "john" ]]; then
         source ${rmtools}/john.sh
+    elif [[ "${option}" == "recondog" ]]; then
+        source ${rmtools}/recondog.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -349,6 +353,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/ghost.sh
     elif [[ "${option}" == "john" ]]; then
         source ${settings}/retools/john.sh
+    elif [[ "${option}" == "recondog" ]]; then
+        source ${settings}/retools/recondog.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi

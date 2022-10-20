@@ -1,0 +1,4 @@
+#!/bin/bash
+recondog="/data/data/com.termux/files/usr/opt/ReconDog"
+cd ${recondog}
+exec python3 "${recondog}/dog" "$@"
