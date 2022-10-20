@@ -163,6 +163,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/exiftool.sh
     elif [[ "${option}" == "ghost" ]]; then
         source ${intools}/ghost.sh
+    elif [[ "${option}" == "john" ]]; then
+        source ${intools}/john.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -253,6 +255,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/exiftool.sh
     elif [[ "${option}" == "ghost" ]]; then
         source ${rmtools}/ghost.sh
+    elif [[ "${option}" == "john" ]]; then
+        source ${rmtools}/john.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -343,6 +347,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/exiftool.sh
     elif [[ "${option}" == "ghost" ]]; then
         source ${settings}/retools/ghost.sh
+    elif [[ "${option}" == "john" ]]; then
+        source ${settings}/retools/john.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
