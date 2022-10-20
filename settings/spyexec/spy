@@ -157,6 +157,10 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/gophish.sh
     elif [[ "${option}" == "netcat" ]]; then
         source ${intools}/netcat.sh
+    elif [[ "${option}" == "shodan" ]]; then
+        source ${intools}/shodan.sh
+    elif [[ "${option}" == "exiftool" ]]; then
+        source ${intools}/exiftool.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -241,6 +245,10 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/gophish.sh
     elif [[ "${option}" == "netcat" ]]; then
         source ${rmtools}/netcat.sh
+    elif [[ "${option}" == "shodan" ]]; then
+        source ${rmtools}/shodan.sh
+    elif [[ "${option}" == "exiftool" ]]; then
+        source ${rmtools}/exiftool.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -325,6 +333,10 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/gophish.sh
     elif [[ "${option}" == "netcat" ]]; then
         source ${settings}/retools/netcat.sh
+    elif [[ "${option}" == "shodan" ]]; then
+        source ${settings}/retools/shodan.sh
+    elif [[ "${option}" == "exiftool" ]]; then
+        source ${settings}/retools/exiftool.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
