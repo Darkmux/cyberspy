@@ -79,6 +79,7 @@ function installing() {
         python3 -m pip install fuzzywuzzy
         python3 -m pip install requests
         python3 -m pip install google
+        python3 -m pip install colorama
         wget https://raw.githubusercontent.com/Darkmux/phoenix-packages/main/tools/MagmaOsint.zip -O ${settings}/lctools/MagmaOsint.zip
 	cd ${settings}/lctools
 	unzip MagmaOsint.zip
