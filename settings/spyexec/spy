@@ -171,6 +171,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/credmap.sh
     elif [[ "${option}" == "protosint" ]]; then
         source ${intools}/protosint.sh
+    elif [[ "${option}" == "gobuster" ]]; then
+        source ${intools}/gobuster.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -269,6 +271,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/credmap.sh
     elif [[ "${option}" == "protosint" ]]; then
         source ${rmtools}/protosint.sh
+    elif [[ "${option}" == "gobuster" ]]; then
+        source ${rmtools}/gobuster.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -367,6 +371,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/credmap.sh
     elif [[ "${option}" == "protosint" ]]; then
         source ${settings}/retools/protosint.sh
+    elif [[ "${option}" == "gobuster" ]]; then
+        source ${settings}/retools/gobuster.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
