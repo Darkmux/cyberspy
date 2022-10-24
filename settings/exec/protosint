@@ -1,0 +1,4 @@
+#!/bin/bash
+protosint="/data/data/com.termux/files/usr/opt/ProtOSINT"
+cd ${protosint}
+exec python3 "${protosint}/protosint.py" "$@"

@@ -169,6 +169,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/recondog.sh
     elif [[ "${option}" == "credmap" ]]; then
         source ${intools}/credmap.sh
+    elif [[ "${option}" == "protosint" ]]; then
+        source ${intools}/protosint.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -265,6 +267,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/recondog.sh
     elif [[ "${option}" == "credmap" ]]; then
         source ${rmtools}/credmap.sh
+    elif [[ "${option}" == "protosint" ]]; then
+        source ${rmtools}/protosint.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -361,6 +365,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/recondog.sh
     elif [[ "${option}" == "credmap" ]]; then
         source ${settings}/retools/credmap.sh
+    elif [[ "${option}" == "protosint" ]]; then
+        source ${settings}/retools/protosint.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
