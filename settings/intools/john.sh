@@ -77,10 +77,13 @@ function installing() {
         python3 -m pip install --upgrade pip
         git clone https://github.com/openwall/john ${opt}/john
         cd ${opt}/john/src
-	./configure
+	./configure --prefix=$PREFIX
         make -s clean && make -sj4
-        cp ${execute}/john ${bin}
-        chmod 777 ${bin}/john
+        ln -s ${opt}/john/run ${share}/john
+        ln -s ${opt}/john/run/john ${bin}/john
+        ln -s ${opt}/john/run/zip2john ${bin}/zip2john
+        ln -s ${opt}/john/run/rar2john ${bin}/rar2john
+        ln -s ${opt}/john/run/ssh2john.py ${bin}/ssh2john
         echo -e ${red}"
 [${green}√${red}] ${green}Installation Finished, Please Execute:${white}
 

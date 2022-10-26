@@ -73,7 +73,11 @@ function removing() {
 	echo -e ${red}"
 [${green}*${red}] ${green}Removing john..."${white}
         rm -rf ${opt}/john
+        rm ${share}/john
         rm ${bin}/john
+        rm ${bin}/zip2john
+        rm ${bin}/rar2john
+        rm ${bin}/ssh2john
         echo -e ${red}"
 [${green}√${red}] ${green}Removal Completed"${white}
     else

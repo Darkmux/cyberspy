@@ -1,4 +1,0 @@
-#!/bin/bash
-john="/data/data/com.termux/files/usr/opt/john/run"
-cd ${john}
-exec python3 "${john}/ssh2john.py" "$@"
