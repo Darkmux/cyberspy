@@ -173,6 +173,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/protosint.sh
     elif [[ "${option}" == "gobuster" ]]; then
         source ${intools}/gobuster.sh
+    elif [[ "${option}" == "hash-id" ]]; then
+        source ${intools}/hash-id.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -273,6 +275,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/protosint.sh
     elif [[ "${option}" == "gobuster" ]]; then
         source ${rmtools}/gobuster.sh
+    elif [[ "${option}" == "hash-id" ]]; then
+        source ${rmtools}/hash-id.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -373,6 +377,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/protosint.sh
     elif [[ "${option}" == "gobuster" ]]; then
         source ${settings}/retools/gobuster.sh
+    elif [[ "${option}" == "hash-id" ]]; then
+        source ${settings}/retools/hash-id.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi

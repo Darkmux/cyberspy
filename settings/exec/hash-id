@@ -1,0 +1,4 @@
+#!/bin/bash
+hashid="/data/data/com.termux/files/usr/opt/hash-identifier"
+cd ${hashid}
+exec python3 "${hashid}/hash-id.py" "$@"
