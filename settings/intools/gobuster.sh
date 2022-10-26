@@ -77,8 +77,7 @@ function installing() {
         git clone https://github.com/OJ/gobuster ${opt}/gobuster
         cd ${opt}/gobuster
         go get && go build
-        cp ${execute}/gobuster ${bin}
-        chmod 777 ${bin}/gobuster
+        ln -s ${opt}/gobuster/gobuster ${bin}/gobuster
         echo -e ${red}"
 [${green}√${red}] ${green}Installation Finished, Please Execute:${white}
 

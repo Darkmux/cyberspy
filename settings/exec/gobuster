@@ -1,4 +1,1 @@
 #!/bin/bash
-gobuster="/data/data/com.termux/files/usr/opt/gobuster"
-cd ${gobuster}
-./gobuster "$@"
