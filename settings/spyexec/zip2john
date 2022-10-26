@@ -1,0 +1,4 @@
+#!/bin/bash
+john="/data/data/com.termux/files/usr/opt/john/run"
+cd ${john}
+./zip2john "$@"
