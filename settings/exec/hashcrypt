@@ -1,0 +1,4 @@
+#!/bin/bash
+hashcrypt="/data/data/com.termux/files/usr/opt/hashcrypt"
+cd ${hashcrypt}
+exec python3 "${hashcrypt}/hashcrypt-v2.py" "$@"
