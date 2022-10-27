@@ -66,21 +66,24 @@ redBack=$(setterm -background red)
 yellowBack=$(setterm -background yellow)
 whiteBack=$(setterm -background white)
 # ==============================================
-#             Installing Tool
+#                 Removing Tool
 # ==============================================
-function installing() {
-    if [ -x ${bin}/trape ]; then
-        spy remove trape
-        spy install trape
+function removing() {
+    if [ -x ${bin}/octosuite ]; then
+	echo -e ${red}"
+[${green}*${red}] ${green}Removing octosuite..."${white}
+        python3 -m pip uninstall octosuite
+        echo -e ${red}"
+[${green}√${red}] ${green}Removal Completed"${white}
     else
 	echo -e ${red}"
-[${yellow}!${red}] ${red}Not Installed"${white}
+[${yellow}!${red}] Not Installed"${white}
     fi
 }
 # ==============================================
 #              Declaring functions
 # ==============================================
-installing
+removing
 # ==============================================
 #    Created by: @Darkmux - WHITE HACKS ©2022
 # ==============================================

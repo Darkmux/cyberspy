@@ -69,21 +69,17 @@ whiteBack=$(setterm -background white)
 #             Installing Tool
 # ==============================================
 function installing() {
-    if [ ! -x ${bin}/trape ]; then
+    if [ ! -x ${bin}/octosuite ]; then
 	echo -e ${red}"
-[${green}*${red}] ${green}Installing trape..."${white}
+[${green}*${red}] ${green}Installing octosuite..."${white}
         yes|pkg update && pkg upgrade
-        yes|pkg install python
+        yes|pkg install python3
         python3 -m pip install --upgrade pip
-        git clone https://github.com/jofpin/trape ${opt}/trape
-        cd ${opt}/trape
-        python3 -m pip install -r requirements.txt
-        cp ${execute}/trape ${bin}
-        chmod 777 ${bin}/trape
+	python3 -m pip install octosuite
         echo -e ${red}"
 [${green}√${red}] ${green}Installation Finished, Please Execute:${white}
 
-trape
+octosuite <ARGUMENTS>
 
 "
     else

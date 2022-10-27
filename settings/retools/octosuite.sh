@@ -66,25 +66,21 @@ redBack=$(setterm -background red)
 yellowBack=$(setterm -background yellow)
 whiteBack=$(setterm -background white)
 # ==============================================
-#                 Removing Tool
+#             Installing Tool
 # ==============================================
-function removing() {
-    if [ -x ${bin}/trape ]; then
-	echo -e ${red}"
-[${green}*${red}] ${green}Removing trape..."${white}
-        rm -rf ${opt}/trape
-        rm ${bin}/trape
-        echo -e ${red}"
-[${green}√${red}] ${green}Removal Completed"${white}
+function installing() {
+    if [ -x ${bin}/octosuite ]; then
+        spy remove octosuite
+        spy install octosuite
     else
 	echo -e ${red}"
-[${yellow}!${red}] Not Installed"${white}
+[${yellow}!${red}] ${red}Not Installed"${white}
     fi
 }
 # ==============================================
 #              Declaring functions
 # ==============================================
-removing
+installing
 # ==============================================
 #    Created by: @Darkmux - WHITE HACKS ©2022
 # ==============================================

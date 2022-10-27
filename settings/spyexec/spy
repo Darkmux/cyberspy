@@ -137,8 +137,6 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/crunch.sh
     elif [[ "${option}" == "email2pn" ]]; then
         source ${intools}/email2pn.sh
-    elif [[ "${option}" == "trape" ]]; then
-        source ${intools}/trape.sh
     elif [[ "${option}" == "redhawk" ]]; then
         source ${intools}/redhawk.sh
     elif [[ "${option}" == "hydra" ]]; then
@@ -177,6 +175,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/hash-id.sh
     elif [[ "${option}" == "hashcrypt" ]]; then
         source ${intools}/hashcrypt.sh
+    elif [[ "${option}" == "octosuite" ]]; then
+        source ${intools}/octosuite.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -241,8 +241,6 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/crunch.sh
     elif [[ "${option}" == "email2pn" ]]; then
         source ${rmtools}/email2pn.sh
-    elif [[ "${option}" == "trape" ]]; then
-        source ${rmtools}/trape.sh
     elif [[ "${option}" == "redhawk" ]]; then
         source ${rmtools}/redhawk.sh
     elif [[ "${option}" == "hydra" ]]; then
@@ -281,6 +279,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/hash-id.sh
     elif [[ "${option}" == "hashcrypt" ]]; then
         source ${rmtools}/hashcrypt.sh
+    elif [[ "${option}" == "octosuite" ]]; then
+        source ${rmtools}/octosuite.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -345,8 +345,6 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/crunch.sh
     elif [[ "${option}" == "email2pn" ]]; then
         source ${settings}/retools/email2pn.sh
-    elif [[ "${option}" == "trape" ]]; then
-        source ${settings}/retools/trape.sh
     elif [[ "${option}" == "redhawk" ]]; then
         source ${settings}/retools/redhawk.sh
     elif [[ "${option}" == "hydra" ]]; then
@@ -385,6 +383,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/hash-id.sh
     elif [[ "${option}" == "hashcrypt" ]]; then
         source ${settings}/retools/hashcrypt.sh
+    elif [[ "${option}" == "octosuite" ]]; then
+        source ${settings}/retools/octosuite.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
