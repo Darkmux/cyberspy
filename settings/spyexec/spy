@@ -177,6 +177,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/hashcrypt.sh
     elif [[ "${option}" == "octosuite" ]]; then
         source ${intools}/octosuite.sh
+    elif [[ "${option}" == "sigit" ]]; then
+        source ${intools}/sigit.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -281,6 +283,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/hashcrypt.sh
     elif [[ "${option}" == "octosuite" ]]; then
         source ${rmtools}/octosuite.sh
+    elif [[ "${option}" == "sigit" ]]; then
+        source ${rmtools}/sigit.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -385,6 +389,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/hashcrypt.sh
     elif [[ "${option}" == "octosuite" ]]; then
         source ${settings}/retools/octosuite.sh
+    elif [[ "${option}" == "sigit" ]]; then
+        source ${settings}/retools/sigit.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
