@@ -179,6 +179,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/octosuite.sh
     elif [[ "${option}" == "sigit" ]]; then
         source ${intools}/sigit.sh
+    elif [[ "${option}" == "fbuserid" ]]; then
+        source ${intools}/fbuserid.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -285,6 +287,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/octosuite.sh
     elif [[ "${option}" == "sigit" ]]; then
         source ${rmtools}/sigit.sh
+    elif [[ "${option}" == "fbuserid" ]]; then
+        source ${rmtools}/fbuserid.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -391,6 +395,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/octosuite.sh
     elif [[ "${option}" == "sigit" ]]; then
         source ${settings}/retools/sigit.sh
+    elif [[ "${option}" == "fbuserid" ]]; then
+        source ${settings}/retools/fbuserid.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi

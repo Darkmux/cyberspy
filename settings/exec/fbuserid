@@ -1,0 +1,4 @@
+#!/bin/bash
+fbuserid="/data/data/com.termux/files/usr/opt/fbuserid"
+cd ${fbuserid}
+exec bash "${fbuserid}/fbuserid.sh" "$@"
