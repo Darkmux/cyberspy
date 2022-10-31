@@ -71,7 +71,7 @@ whiteBack=$(setterm -background white)
 function updating() {
     echo -e ${red}"
 [${green}*${red}] ${green}Installing updates..."${white}
-    yes|pkg update && pkg upgrade
+    yes|pkg update && yes|pkg upgrade
     yes|pkg install ruby
     gem install lolcat
     cp ${style}/bash.bashrc ${etc}

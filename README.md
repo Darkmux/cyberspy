@@ -13,7 +13,7 @@ Hacking Tool Suite for Android in Termux **(No root)**
 ## Installation in Termux
 > Update Termux repositories.
 ```bash
-yes|pkg update && pkg upgrade
+yes|pkg update && yes|pkg upgrade
 ```
 > Grant storage permissions to Termux.
 ```bash
