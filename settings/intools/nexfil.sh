@@ -75,6 +75,8 @@ function installing() {
         yes|pkg update && pkg upgrade
         yes|pkg install python
         python3 -m pip install --upgrade pip
+        python3 -m pip install tldextract
+        python3 -m pip install aiohttp
         git clone https://github.com/thewhiteh4t/nexfil ${opt}/nexfil
         cd ${opt}/nexfil
         python3 -m pip install -r requirements.txt
