@@ -257,7 +257,7 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/vector.sh
     elif [[ "${option}" == "routersploit" ]]; then
         source ${rmtools}/routersploit.sh
-    elif [[ "${optiom}" == "sherlock" ]]; then
+    elif [[ "${option}" == "sherlock" ]]; then
         source ${rmtools}/sherlock.sh
     elif [[ "${option}" == "gophish" ]]; then
         source ${rmtools}/gophish.sh
