@@ -76,6 +76,8 @@ function installing() {
         yes|pkg install python
         python3 -m pip install --upgrade pip
         yes|pkg install python-numpy
+        yes|pkg install python-numpy-static
+        MATHLIB="m" pip install pandas
         git clone https://github.com/sherlock-project/sherlock ${opt}/sherlock
         cd ${opt}/sherlock
         python3 -m pip install -r requirements.txt
