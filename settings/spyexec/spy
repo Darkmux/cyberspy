@@ -63,19 +63,6 @@ if [[ "${argument}" == "update" ]]; then
     chmod 777 *.sh
     bash update.sh
     echo -e ${red}"[${green}√${red}] ${green}CyberSpy Updated"${white}
-elif [[ "${argument}" == "style" ]]; then
-    if [[ "${option}" == "small" ]]; then
-	cp ${style}/spy.small.txt ${style}/spy.txt
-	cat ${style}/spy.txt | lolcat
-    elif [[ "${option}" == "medium" ]]; then
-	cp ${style}/spy.medium.txt ${style}/spy.txt
-	cat ${style}/spy.txt | lolcat
-    elif [[ "${option}" == "large" ]]; then
-	cp ${style}/spy.large.txt ${style}/spy.txt
-	cat ${style}/spy.txt | lolcat
-    else
-	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
-    fi
 elif [[ "${argument}" == "install" ]]; then
     if [[ "${option}" == "ncshare" ]]; then
 	source ${intools}/ncshare.sh
@@ -445,12 +432,44 @@ elif [[ "${argument}" == "list" ]]; then
 	done
 	rm ${settings}/names.txt
     elif [[ "${option}" == "banners" ]]; then
-	echo -e ${blue}"[${white}01${blue}] ${white}small"
+	echo -e ${blue}"[${white}-${blue}] ${white}small"
 	sleep 0.1
-	echo -e ${blue}"[${white}02${blue}] ${white}medium"
+	echo -e ${blue}"[${white}-${blue}] ${white}medium"
 	sleep 0.1
-	echo -e ${blue}"[${white}03${blue}] ${white}large"
+	echo -e ${blue}"[${white}-${blue}] ${white}large"
 	sleep 0.1
+    elif [[ "${option}" == "prompts" ]]; then
+        echo -e ${blue}"[${white}-${blue}] ${white}default"
+        sleep 0.1
+        echo -e ${blue}"[${white}-${blue}] ${white}cyberspy"
+        sleep 0.1
+        echo -e ${blue}"[${white}-${blue}] ${white}custom"
+        sleep 0.1
+    else
+	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
+    fi
+elif [[ "${argument}" == "style" ]]; then
+    if [[ "${option}" == "small" ]]; then
+	cp ${style}/spy.small.txt ${style}/spy.txt
+	cat ${style}/spy.txt | lolcat
+    elif [[ "${option}" == "medium" ]]; then
+	cp ${style}/spy.medium.txt ${style}/spy.txt
+	cat ${style}/spy.txt | lolcat
+    elif [[ "${option}" == "large" ]]; then
+	cp ${style}/spy.large.txt ${style}/spy.txt
+	cat ${style}/spy.txt | lolcat
+    elif [[ "${option}" == "default" ]]; then
+        cp ~/cyberspy/settings/style/fish_prompt.fish.default ~/.config/fish/functions/fish_prompt.fish
+    elif [[ "${option}" == "cyberspy" ]]; then
+        cp ~/cyberspy/settings/style/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
+    elif [[ "${option}" == "custom" ]]; then
+        cp ~/cyberspy/settings/style/fish_prompt.fish ~/cyberspy/settings/style/fish_prompt.fish.backup
+        echo -e -n ${blue}"[${white}-${blue}] USERNAME: "${white}
+        read -r USERNAME
+        sed -i "s/cyberspy/${USERNAME}/g" ~/cyberspy/settings/style/fish_prompt.fish
+        mv ~/cyberspy/settings/style/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
+        mv ~/cyberspy/settings/style/fish_prompt.fish.backup ~/cyberspy/settings/style/fish_prompt.fish
+        sleep 0.5
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
