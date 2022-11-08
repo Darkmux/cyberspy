@@ -400,7 +400,7 @@ Arguments Available:
 
 $ ${white}spy help${blue}
 
-$ ${white}spy list ${blue}<${white}tools${blue}|${white}banners${blue}>
+$ ${white}spy list ${blue}<${white}tools${blue}|${white}banners${blue}|${white}prompts${blue}>
 
 $ ${white}spy update${blue}
 
