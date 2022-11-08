@@ -392,7 +392,7 @@ elif [[ "${argument}" == "uninstall" ]]; then
     echo -e ${red}"[${green}√${red}] ${green}CyberSpy Uninstalled"${white}
 elif [[ "${argument}" == "help" ]]; then
     echo -e ${blue}"
-[${white}√${blue}] ${white}CyberSpy Help
+[${white}-${blue}] ${white}CyberSpy Help
 
 spy ${blue}<${white}arguments${blue}> <${white}options${blue}>
 
@@ -406,7 +406,7 @@ $ ${white}spy update${blue}
 
 $ ${white}spy uninstall${blue}
 
-$ ${white}spy style ${blue}<${white}banner${blue}>
+$ ${white}spy style ${blue}<${white}banner${blue}|${white}prompt${blue}>
 
 $ ${white}spy install ${blue}<${white}tool${blue}>
 

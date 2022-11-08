@@ -75,6 +75,8 @@ function installing() {
         yes|pkg update && pkg upgrade
         yes|pkg install python
         python3 -m pip install --upgrade pip
+        python3 -m pip install Pillow
+        yes|pkg install python-pillow
         git clone https://github.com/thesaderror/vector ${opt}/vector
         cd ${opt}/vector
         python3 -m pip install -r requirements.txt
