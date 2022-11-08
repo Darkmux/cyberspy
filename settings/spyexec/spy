@@ -464,7 +464,7 @@ elif [[ "${argument}" == "style" ]]; then
         cp ~/cyberspy/settings/style/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
     elif [[ "${option}" == "custom" ]]; then
         cp ~/cyberspy/settings/style/fish_prompt.fish ~/cyberspy/settings/style/fish_prompt.fish.backup
-        echo -e -n ${blue}"[${white}-${blue}] USERNAME: "${white}
+        echo -e -n ${blue}"[${white}-${blue}] ${white}Username: "${black}
         read -r USERNAME
         sed -i "s/cyberspy/${USERNAME}/g" ~/cyberspy/settings/style/fish_prompt.fish
         mv ~/cyberspy/settings/style/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
