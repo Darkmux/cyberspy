@@ -74,6 +74,7 @@ function installing() {
 [${green}*${red}] ${green}Installing ghost..."${white}
         yes|pkg update && pkg upgrade
         yes|pkg install python3 android-tools git
+        yes|pkg install python-cryptography
         python3 -m pip install --upgrade pip
 	python3 -m pip install git+https://github.com/EntySec/Ghost
         echo -e ${red}"
