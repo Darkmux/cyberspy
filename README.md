@@ -25,7 +25,7 @@ yes|pkg install git
 ```
 > Clone github repository.
 ```bash
-git clone https://github.com/Darkmux/cyberspy
+git clone https://github.com/Darkmux/cyberspy.git
 ```
 > Access the cloned "cyberspy" folder.
 ```bash
@@ -48,7 +48,7 @@ spy help
 ```
 > Shows the list of tools or banners available to use and install.
 ```bash
-spy list <tools|banners>
+spy list <tools|banners|prompts>
 ```
 > Find and update CyberSpy to its latest version.  (Run it whenever they enter the terminal).
 ```bash
@@ -60,7 +60,7 @@ spy uninstall
 ```
 > Changes the size of the banner depending on the specified argument.  (It is recommended to adapt it to your font size in Termux).
 ```bash
-spy style <banner>
+spy style <banner|prompt>
 ```
 > Installs the tool specified as an argument.
 ```bash
