@@ -78,8 +78,7 @@ function installing() {
         git clone https://github.com/opsdisk/metagoofil ${opt}/metagoofil
         cd ${opt}/metagoofil
 	python3 -m pip install -r requirements.txt
-        cp ${execute}/metagoofil ${bin}
-        chmod 777 ${bin}/metagoofil
+        ln -s ${opt}/metagoofil/metagoofil.py ${bin}/metagoofil
         echo -e ${red}"
 [${green}√${red}] ${green}Installation Finished, Please Execute:${white}
 
