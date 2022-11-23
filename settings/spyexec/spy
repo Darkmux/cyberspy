@@ -152,8 +152,6 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/john.sh
     elif [[ "${option}" == "recondog" ]]; then
         source ${intools}/recondog.sh
-    elif [[ "${option}" == "credmap" ]]; then
-        source ${intools}/credmap.sh
     elif [[ "${option}" == "protosint" ]]; then
         source ${intools}/protosint.sh
     elif [[ "${option}" == "gobuster" ]]; then
@@ -262,8 +260,6 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/john.sh
     elif [[ "${option}" == "recondog" ]]; then
         source ${rmtools}/recondog.sh
-    elif [[ "${option}" == "credmap" ]]; then
-        source ${rmtools}/credmap.sh
     elif [[ "${option}" == "protosint" ]]; then
         source ${rmtools}/protosint.sh
     elif [[ "${option}" == "gobuster" ]]; then
@@ -372,8 +368,6 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/john.sh
     elif [[ "${option}" == "recondog" ]]; then
         source ${settings}/retools/recondog.sh
-    elif [[ "${option}" == "credmap" ]]; then
-        source ${settings}/retools/credmap.sh
     elif [[ "${option}" == "protosint" ]]; then
         source ${settings}/retools/protosint.sh
     elif [[ "${option}" == "gobuster" ]]; then

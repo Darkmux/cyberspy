@@ -1,4 +1,0 @@
-#!/bin/bash
-credmap="/data/data/com.termux/files/usr/opt/credmap"
-cd ${credmap}
-exec python2 "${credmap}/credmap.py" "$@"
