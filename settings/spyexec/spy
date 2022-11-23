@@ -168,6 +168,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/fbuserid.sh
     elif [[ "${option}" == "sublist3r" ]]; then
         source ${intools}/sublist3r.sh
+    elif [[ "${option}" == "hash-buster" ]]; then
+        source ${intools}/hash-buster.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -276,6 +278,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/fbuserid.sh
     elif [[ "${option}" == "sublist3r" ]]; then
         source ${rmtools}/sublist3r.sh
+    elif [[ "${option}" == "hash-buster" ]]; then
+        source ${rmtools}/hash-buster.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -384,6 +388,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/fbuserid.sh
     elif [[ "${option}" == "sublist3r" ]]; then
         source ${settings}/retools/sublist3r.sh
+    elif [[ "${option}" == "hash-buster" ]]; then
+        source ${settings}/retools/hash-buster.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi

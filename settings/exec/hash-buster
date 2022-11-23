@@ -1,0 +1,4 @@
+#!/bin/bash
+buster="/data/data/com.termux/files/usr/opt/Hash-Buster"
+cd ${buster}
+exec python3 "${buster}/hash.py" "$@"
