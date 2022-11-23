@@ -79,6 +79,7 @@ function installing() {
         cd ${opt}/metagoofil
 	python3 -m pip install -r requirements.txt
         ln -s ${opt}/metagoofil/metagoofil.py ${bin}/metagoofil
+        chmod 777 ${bin}/metagoofil
         echo -e ${red}"
 [${green}√${red}] ${green}Installation Finished, Please Execute:${white}
 
