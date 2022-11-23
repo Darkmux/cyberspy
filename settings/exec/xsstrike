@@ -1,0 +1,4 @@
+#!/bin/bash
+xsstrike="/data/data/com.termux/files/usr/opt/XSStrike"
+cd ${xsstrike}
+exec python3 "${xsstrike}/xsstrike.py" "$@"

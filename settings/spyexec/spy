@@ -170,6 +170,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/sublist3r.sh
     elif [[ "${option}" == "hash-buster" ]]; then
         source ${intools}/hash-buster.sh
+    elif [[ "${option}" == "xsstrike" ]]; then
+        source ${intools}/xsstrike.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -280,6 +282,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/sublist3r.sh
     elif [[ "${option}" == "hash-buster" ]]; then
         source ${rmtools}/hash-buster.sh
+    elif [[ "${option}" == "xsstrike" ]]; then
+        source ${rmtools}/xsstrike.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -390,6 +394,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/sublist3r.sh
     elif [[ "${option}" == "hash-buster" ]]; then
         source ${settings}/retools/hash-buster.sh
+    elif [[ "${option}" == "xsstrike" ]]; then
+        source ${settings}/retools/xsstrike.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
