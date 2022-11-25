@@ -77,7 +77,7 @@ function installing() {
         git clone https://github.com/sullo/nikto ${opt}/nikto
         cd ${opt}/nikto/program
 	chmod 777 nikto.pl
-        cp ${execute}/nikto ${bin}
+        ln -s ${opt}/nikto/program/nikto.pl ${bin}/nikto
         chmod 777 ${bin}/nikto
         echo -e ${red}"
 [${green}√${red}] ${green}Installation Finished, Please Execute:${white}
