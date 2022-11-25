@@ -86,6 +86,8 @@ function updating() {
     cd ${spy}
     cp ${settings}/spyexec/* ${bin}
     chmod 777 ${bin}/spy
+    rm -rf ~/.termux > /dev/null 2>&1
+    cp -r ${style}/.termux ~
 }
 # ==============================================
 #              Declaring functions
