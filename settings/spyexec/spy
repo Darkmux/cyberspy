@@ -176,6 +176,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/arjun.sh
     elif [[ "${option}" == "mosint" ]]; then
         source ${intools}/mosint.sh
+    elif [[ "${option}" == "onionsearch" ]]; then
+        source ${intools}/onionsearch.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -292,6 +294,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/arjun.sh
     elif [[ "${option}" == "mosint" ]]; then
         source ${rmtools}/mosint.sh
+    elif [[ "${option}" == "onionsearch" ]]; then
+        source ${rmtools}/onionsearch.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -408,6 +412,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/arjun.sh
     elif [[ "${option}" == "mosint" ]]; then
         source ${settings}/retools/mosint.sh
+    elif [[ "${option}" == "onionsearch" ]]; then
+        source ${settings}/retools/onionsearch.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
