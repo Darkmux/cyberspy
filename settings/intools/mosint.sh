@@ -69,20 +69,20 @@ whiteBack=$(setterm -background white)
 #             Installing Tool
 # ==============================================
 function installing() {
-    if [ ! -x ${bin}/gobuster ]; then
+    if [ ! -x ${bin}/mosint ]; then
 	echo -e ${red}"
-[${green}*${red}] ${green}Installing gobuster..."${white}
+[${green}*${red}] ${green}Installing mosint..."${white}
         yes|pkg update && pkg upgrade
         yes|pkg install golang
-        git clone https://github.com/OJ/gobuster ${opt}/gobuster
-        cd ${opt}/gobuster
+        git clone https://github.com/alpkeskin/mosint ${opt}/mosint
+        cd ${opt}/mosint
         go get && go build
-        ln -s ${opt}/gobuster/gobuster ${bin}/gobuster
-        chmod 777 ${bin}/gobuster
+        ln -s ${opt}/mosint/mosint ${bin}/mosint
+        chmod 777 ${bin}/mosint
         echo -e ${red}"
 [${green}√${red}] ${green}Installation Finished, Please Execute:${white}
 
-gobuster <ARGUMENTS>
+mosint <ARGUMENTS>
 
 "
     else

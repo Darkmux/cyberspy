@@ -66,34 +66,25 @@ redBack=$(setterm -background red)
 yellowBack=$(setterm -background yellow)
 whiteBack=$(setterm -background white)
 # ==============================================
-#             Installing Tool
+#                 Removing Tool
 # ==============================================
-function installing() {
-    if [ ! -x ${bin}/gobuster ]; then
+function removing() {
+    if [ -x ${bin}/mosint ]; then
 	echo -e ${red}"
-[${green}*${red}] ${green}Installing gobuster..."${white}
-        yes|pkg update && pkg upgrade
-        yes|pkg install golang
-        git clone https://github.com/OJ/gobuster ${opt}/gobuster
-        cd ${opt}/gobuster
-        go get && go build
-        ln -s ${opt}/gobuster/gobuster ${bin}/gobuster
-        chmod 777 ${bin}/gobuster
+[${green}*${red}] ${green}Removing mosint..."${white}
+        rm -rf ${opt}/mosint
+        rm ${bin}/mosint
         echo -e ${red}"
-[${green}√${red}] ${green}Installation Finished, Please Execute:${white}
-
-gobuster <ARGUMENTS>
-
-"
+[${green}√${red}] ${green}Removal Completed"${white}
     else
 	echo -e ${red}"
-[${green}*${red}] ${green}Already Installed"${white}
+[${yellow}!${red}] Not Installed"${white}
     fi
 }
 # ==============================================
 #              Declaring functions
 # ==============================================
-installing
+removing
 # ==============================================
 #    Created by: @Darkmux - WHITE HACKS ©2022
 # ==============================================
