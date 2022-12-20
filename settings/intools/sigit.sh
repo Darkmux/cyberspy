@@ -75,6 +75,7 @@ function installing() {
         yes|pkg update && pkg upgrade
         yes|pkg install python
         python3 -m pip install --upgrade pip
+        python3 -m pip install email_validator
         git clone https://github.com/termuxhackers-id/SIGIT ${opt}/SIGIT
         cd ${opt}/SIGIT
         chmod 777 install.sh
