@@ -94,6 +94,8 @@ function installing() {
 	chmod 777 ~/metasploit.sh
         bash ~/metasploit.sh
 	rm -rf metasploit.sh
+        rm ${usr}/lib/ruby/gems/3.2.0/gems/pry-0.13.1/lib/pry/code.rb
+        cp ${settings}/config/code.rb ${usr}/lib/ruby/gems/3.2.0/gems/pry-0.13.1/lib/pry/code.rb
         echo -e ${red}"
 [${green}√${red}] ${green}Installation Finished, Please Execute:${white}
 
