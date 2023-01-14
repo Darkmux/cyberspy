@@ -178,6 +178,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/mosint.sh
     elif [[ "${option}" == "onionsearch" ]]; then
         source ${intools}/onionsearch.sh
+    elif [[ "${option}" == "virustotal-cli" ]]; then
+        source ${intools}/virustotal-cli.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -296,6 +298,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/mosint.sh
     elif [[ "${option}" == "onionsearch" ]]; then
         source ${rmtools}/onionsearch.sh
+    elif [[ "${option}" == "virustotal-cli" ]]; then
+        source ${rmtools}/virustotal-cli.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -414,6 +418,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/mosint.sh
     elif [[ "${option}" == "onionsearch" ]]; then
         source ${settings}/retools/onionsearch.sh
+    elif [[ "${option}" == "virustotal-cli" ]]; then
+        source ${settings}/retools/virustotal-cli.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
