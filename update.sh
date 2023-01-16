@@ -74,7 +74,10 @@ function updating() {
     yes|pkg update && yes|pkg upgrade
     yes|pkg install ruby
     gem install lolcat
-    cp ${style}/bash.bashrc ${etc}
+    grep -oE chsh $PREFIX/etc/bash.bashrc >/dev/null 2>/dev/null || { sed -i '12a chsh -s fish' ${etc}/bash.bashrc;} #Set shell fish as main shell 
+    mv ${etc}/motd ${etc}/motd.backup > /dev/null 2>&1
+    [[ -e ${etc}/fish/config.fish ]] && { rm ${etc}/fish/config.fish;} #Delete the original config file of shell fish
+    ln -s ${settings}/config/config.fish ${etc}/fish/config.fish #Symbolic link at modified main fish config file 
     cd ${execute}
     chmod 777 *
     cd ${intools}
