@@ -88,9 +88,15 @@ function style() {
     chmod 777 *.sh
     rm -rf ~/.termux > /dev/null 2>&1
     cp -r ${style}/.termux ~
-    mv ${etc}/bash.bashrc ${etc}/bash.bashrc.backup > /dev/null 2>&1
+    grep chsh ${etc}/bash.bashrc >/dev/null 2>/dev/null || { sed -i '12a chsh -s fish' ${etc}/bash.bashrc;} #Set shell fish as main shell
+    cat <<- CONF > ~/.bashrc
+grep chsh ${etc}/bash.bashrc >/dev/null 2>/dev/null || { sed -i '12a chsh -s fish' ${etc}/bash.bashrc;}
+[[ -e ${etc}/fish/config.fish ]] && { rm ${etc}/fish/config.fish;}
+ln -s ${settings}/config/config.fish ${etc}/fish/config.fish 2>/dev/null #Symbolic link at modified main fish config file
+CONF
     mv ${etc}/motd ${etc}/motd.backup > /dev/null 2>&1
-    cp ${style}/bash.bashrc ${etc}
+    [[ -e ${etc}/fish/config.fish ]] && { rm -rf ${etc}/fish/config.fish;}
+    ln -s ${settings}/config/config.fish ${etc}/fish/config.fish #Symbolic link at modified main fish config file 
     if [ ! -d ${opt} ]; then
 	mkdir -p ${opt}
     fi
