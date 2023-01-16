@@ -89,6 +89,11 @@ function style() {
     rm -rf ~/.termux > /dev/null 2>&1
     cp -r ${style}/.termux ~
     grep chsh ${etc}/bash.bashrc >/dev/null 2>/dev/null || { sed -i '12a chsh -s fish' ${etc}/bash.bashrc;} #Set shell fish as main shell
+    cat <<- CONF > ~/.bashrc
+grep chsh ${etc}/bash.bashrc >/dev/null 2>/dev/null || { sed -i '12a chsh -s fish' ${etc}/bash.bashrc;}
+[[ -e ${etc}/fish/config.fish ]] && { rm ${etc}/fish/config.fish;}
+ln -s ${settings}/config/config.fish ${etc}/fish/config.fish 2>/dev/null #Symbolic link at modified main fish config file
+CONF
     mv ${etc}/motd ${etc}/motd.backup > /dev/null 2>&1
     [[ -e ${etc}/fish/config.fish ]] && { rm -rf ${etc}/fish/config.fish;}
     ln -s ${settings}/config/config.fish ${etc}/fish/config.fish #Symbolic link at modified main fish config file 
