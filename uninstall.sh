@@ -75,7 +75,7 @@ function updating() {
     if [[ "${confirm}" == "y" || "${confirm}" == "Y" || "${confirm}" == "yes" || "${confirm}" == "YES" ]]; then
 	echo -e ${red}"
 [${green}*${red}] ${green}Uninstalling CyberSpy..."${white}
-	mv ${etc}/bash.bashrc.backup ${etc}/bash.bashrc
+	sed -i 's|fish|bash|g' ${etc}/bash.bashrc #Reactive shell bash as main shell
 	mv ${etc}/motd.backup ${etc}/motd
 	rm -rf ~/.termux
 	mkdir -p ~/.termux
