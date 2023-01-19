@@ -79,6 +79,8 @@ function installing() {
 	yes|pkg install wget
 	yes|pkg install openssh
         pip install --upgrade pip
+        python3 -m pip install packaging
+        python3 -m pip install requests
         git clone https://github.com/thewhiteh4t/seeker ${opt}/seeker
         cd ${opt}/seeker
 	chmod 777 install.sh
