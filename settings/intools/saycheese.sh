@@ -79,7 +79,7 @@ function installing() {
 	unzip saycheese.zip
 	mv saycheese ${opt}
         rm -rf saycheese.zip
-        cd ${opt}/saycheese.zip
+        cd ${opt}/saycheese
         chmod 777 *.sh
         cp ${execute}/saycheese ${bin}
         chmod 777 ${bin}/saycheese
