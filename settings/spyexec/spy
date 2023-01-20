@@ -180,6 +180,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/onionsearch.sh
     elif [[ "${option}" == "virustotal-cli" ]]; then
         source ${intools}/virustotal-cli.sh
+    elif [[ "${option}" == "saycheese" ]]; then
+        source ${intools}/saycheese.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -300,6 +302,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/onionsearch.sh
     elif [[ "${option}" == "virustotal-cli" ]]; then
         source ${rmtools}/virustotal-cli.sh
+    elif [[ "${option}" == "saycheese" ]]; then
+        source ${rmtools}/saycheese.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -420,6 +424,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/onionsearch.sh
     elif [[ "${option}" == "virustotal-cli" ]]; then
         source ${settings}/retools/virustotal-cli.sh
+    elif [[ "${option}" == "saycheese" ]]; then
+        source ${settings}/retools/saycheese.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi

@@ -1,0 +1,4 @@
+#!/bin/bash
+saycheese="/data/data/com.termux/files/usr/opt/saycheese"
+cd ${saycheese}
+exec bash "${saycheese}/saycheese.sh" "$@"
