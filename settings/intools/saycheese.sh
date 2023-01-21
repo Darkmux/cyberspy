@@ -82,7 +82,7 @@ function installing() {
         cd ${opt}/saycheese
         chmod 777 *.sh
         ngrokserv
-        ln -s ${bin}/ngrok ${opt}/ngrok
+        ln -s ${bin}/ngrok ${opt}/saycheese/ngrok
         cp ${execute}/saycheese ${bin}
         chmod 777 ${bin}/saycheese
         echo -e ${red}"
