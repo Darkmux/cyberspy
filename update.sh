@@ -72,6 +72,7 @@ function updating() {
     echo -e ${red}"
 [${green}*${red}] ${green}Installing updates..."${white}
     yes|pkg update && yes|pkg upgrade
+    git pull origin main
     yes|pkg install ruby
     gem install lolcat
     cp ${style}/bash.bashrc ${etc}
