@@ -182,6 +182,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/virustotal-cli.sh
     elif [[ "${option}" == "saycheese" ]]; then
         source ${intools}/saycheese.sh
+    elif [[ "${option}" == "apktool" ]]; then
+        source ${intools}/apktool.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -304,6 +306,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/virustotal-cli.sh
     elif [[ "${option}" == "saycheese" ]]; then
         source ${rmtools}/saycheese.sh
+    elif [[ "${option}" == "apktool" ]]; then
+        source ${rmtools}/apktool.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -426,6 +430,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/virustotal-cli.sh
     elif [[ "${option}" == "saycheese" ]]; then
         source ${settings}/retools/saycheese.sh
+    elif [[ "${option}" == "apktool" ]]; then
+        source ${settings}/retools/apktool.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
