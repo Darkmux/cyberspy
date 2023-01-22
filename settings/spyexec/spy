@@ -55,8 +55,6 @@ whiteBack=$(setterm -background white)
 #            Specifying arguments
 # ==============================================
 if [[ "${argument}" == "update" ]]; then
-    echo -e ${red}"
-[${green}*${red}] ${green}Updating CyberSpy..."${white}
     cd ${spy}
     chmod 777 *.sh
     bash update.sh
