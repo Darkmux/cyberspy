@@ -58,7 +58,8 @@ if [[ "${argument}" == "update" ]]; then
     cd ${spy}
     chmod 777 *.sh
     bash update.sh
-    echo -e ${red}"[${green}√${red}] ${green}CyberSpy Updated"${white}
+    echo -e ${white}"cyberspy updated.
+    "
 elif [[ "${argument}" == "install" ]]; then
     if [[ "${option}" == "ncshare" ]]; then
 	source ${intools}/ncshare.sh

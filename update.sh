@@ -69,8 +69,8 @@ whiteBack=$(setterm -background white)
 #             Updating dependencies
 # ==============================================
 function updating() {
-    echo -e ${red}"
-[${green}*${red}] ${green}Installing updates..."${white}
+    echo -e ${white}"
+Installing updates..."${white}
     yes|pkg update && yes|pkg upgrade
     git pull origin main
     yes|pkg install ruby
