@@ -88,9 +88,10 @@ function style() {
     chmod 777 *.sh
     rm -rf ~/.termux > /dev/null 2>&1
     cp -r ${style}/.termux ~
+    mv ${etc}/bash.bashrc ${etc}/bash.bashrc.backup > /dev/null 2>&1
     mv ${etc}/motd ${etc}/motd.backup > /dev/null 2>&1
-    echo "cat /data/data/com.termux/files/home/cyberspy/settings/style/spy.txt | lolcat" >> ~/.config/fish/config.fish
-    echo "chsh -s fish" >> ${etc}/bash.bashrc
+    cp ${style}/bash.bashrc ${etc}
+    cp ${style}/config.fish ~/.config/fish/ > /dev/null 2>&1
     if [ ! -d ${opt} ]; then
 	mkdir -p ${opt}
     fi

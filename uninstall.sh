@@ -66,9 +66,9 @@ redBack=$(setterm -background red)
 yellowBack=$(setterm -background yellow)
 whiteBack=$(setterm -background white)
 # ==============================================
-#             Installing dependencies
+#             Question to Uninstall
 # ==============================================
-function updating() {
+function uninstall() {
     echo -e -n "Are you sure to uninstall CyberSpy? [Y/n]: "
     read -r confirm
 
@@ -121,7 +121,7 @@ function updating() {
 # ==============================================
 #              Declaring functions
 # ==============================================
-updating
+uninstall
 # ==============================================
 #    Created by: @Darkmux - WHITE HACKS ©2022
 # ==============================================
