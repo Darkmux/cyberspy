@@ -75,14 +75,6 @@ Installing updates..."${white}
     git pull origin main
     yes|pkg install ruby
     gem install lolcat
-    cd ${execute}
-    chmod 777 *
-    cd ${intools}
-    chmod 777 *
-    cd ${rmtools}
-    chmod 777 *
-    cd ${settings}/spyexec
-    chmod 777 *
     cd ${spy}
     cp ${settings}/spyexec/* ${bin}
     chmod 777 ${bin}/spy
