@@ -90,6 +90,7 @@ function style() {
     cp -r ${style}/.termux ~
     mv ${etc}/motd ${etc}/motd.backup > /dev/null 2>&1
     echo "cat /data/data/com.termux/files/home/cyberspy/settings/style/spy.txt | lolcat" >> ~/.config/fish/config.fish
+    echo "chsh -s fish" >> ${etc}/bash.bashrc
     if [ ! -d ${opt} ]; then
 	mkdir -p ${opt}
     fi
@@ -110,7 +111,6 @@ function style() {
 omf install separation
 omf install bobthefish
 "${white}
-    chsh -s fish
     curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 }
 # ==============================================
