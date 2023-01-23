@@ -88,9 +88,8 @@ function style() {
     chmod 777 *.sh
     rm -rf ~/.termux > /dev/null 2>&1
     cp -r ${style}/.termux ~
-    mv ${etc}/bash.bashrc ${etc}/bash.bashrc.backup > /dev/null 2>&1
     mv ${etc}/motd ${etc}/motd.backup > /dev/null 2>&1
-    cp ${style}/bash.bashrc ${etc}
+    echo "cat /data/data/com.termux/files/home/cyberspy/settings/style/spy.txt | lolcat" >> ~/.config/fish/config.fish
     if [ ! -d ${opt} ]; then
 	mkdir -p ${opt}
     fi
@@ -105,13 +104,13 @@ function style() {
     cd ${spy}
     cp ${settings}/spyexec/* ${bin}
     chmod 777 ${bin}/spy
-    echo -e ${red}"
-[${green}√${red}] ${green}Installation Finished, Please Execute:${white}
+    echo -e ${blue}"
+[${white}√${blue}] ${white}Installation Finished, Please Execute:${black}
 
-omf install bobthefish
 omf install separation
-omf theme bobthefish
+omf install bobthefish
 "${white}
+    chsh -s fish
     curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 }
 # ==============================================
