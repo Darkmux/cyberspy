@@ -81,6 +81,7 @@ Installing updates..."${white}
     rm -rf ~/.termux > /dev/null 2>&1
     cp -r ${style}/.termux ~
     cp ${style}/bash.bashrc ${etc}
+    cp ${style}/config.fish ~/.config/fish
 }
 # ==============================================
 #              Declaring functions
