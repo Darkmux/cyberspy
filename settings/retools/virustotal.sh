@@ -70,8 +70,8 @@ whiteBack=$(setterm -background white)
 # ==============================================
 function installing() {
     if [ -x ${bin}/vt-cli ]; then
-        spy remove virustotal-cli
-        spy install virustotal-cli
+        spy remove virustotal
+        spy install virustotal
     else
 	echo -e ${red}"
 [${yellow}!${red}] ${red}Not Installed"${white}

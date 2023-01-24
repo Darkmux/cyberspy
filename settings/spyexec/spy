@@ -175,7 +175,7 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/mosint.sh
     elif [[ "${option}" == "onionsearch" ]]; then
         source ${intools}/onionsearch.sh
-    elif [[ "${option}" == "virustotal-cli" ]]; then
+    elif [[ "${option}" == "virustotal" ]]; then
         source ${intools}/virustotal-cli.sh
     elif [[ "${option}" == "saycheese" ]]; then
         source ${intools}/saycheese.sh
@@ -301,7 +301,7 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/mosint.sh
     elif [[ "${option}" == "onionsearch" ]]; then
         source ${rmtools}/onionsearch.sh
-    elif [[ "${option}" == "virustotal-cli" ]]; then
+    elif [[ "${option}" == "virustotal" ]]; then
         source ${rmtools}/virustotal-cli.sh
     elif [[ "${option}" == "saycheese" ]]; then
         source ${rmtools}/saycheese.sh
@@ -427,7 +427,7 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/mosint.sh
     elif [[ "${option}" == "onionsearch" ]]; then
         source ${settings}/retools/onionsearch.sh
-    elif [[ "${option}" == "virustotal-cli" ]]; then
+    elif [[ "${option}" == "virustotal" ]]; then
         source ${settings}/retools/virustotal-cli.sh
     elif [[ "${option}" == "saycheese" ]]; then
         source ${settings}/retools/saycheese.sh
