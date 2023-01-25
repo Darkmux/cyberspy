@@ -183,6 +183,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/apktool.sh
     elif [[ "${option}" == "tmate" ]]; then
         source ${intools}/tmate.sh
+    elif [[ "${option}" == "translate" ]]; then
+        source ${intools}/translate.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -309,6 +311,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/apktool.sh
     elif [[ "${option}" == "tmate" ]]; then
         source ${rmtools}/tmate.sh
+    elif [[ "${option}" == "translate" ]]; then
+        source ${rmtools}/translate.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -435,6 +439,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/apktool.sh
     elif [[ "${option}" == "tmate" ]]; then
         source ${settings}/retools/tmate.sh
+    elif [[ "${option}" == "translate" ]]; then
+        source ${settings}/retools/translate.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi

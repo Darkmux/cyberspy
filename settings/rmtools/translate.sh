@@ -66,59 +66,24 @@ redBack=$(setterm -background red)
 yellowBack=$(setterm -background yellow)
 whiteBack=$(setterm -background white)
 # ==============================================
-#             Installing dependencies
+#                 Removing Tool
 # ==============================================
-function installing() {
-    echo -e ${red}"
-[${green}*${red}] ${green}Installing dependencies..."${white}
-    yes|pkg update && pkg upgrade
-    yes|pkg install git
-    yes|pkg install curl
-    yes|pkg install wget
-    yes|pkg install fish
-    yes|pkg install ruby
-    gem install lolcat
-    yes|pkg install openssl-tool
-    yes|pkg install termux-tools
-}
-# ==============================================
-#          Setting the Termux Style
-# ==============================================
-function style() {
-    chmod 777 *.sh
-    rm -rf ~/.termux > /dev/null 2>&1
-    cp -r ${style}/.termux ~
-    mv ${etc}/bash.bashrc ${etc}/bash.bashrc.backup > /dev/null 2>&1
-    mv ${etc}/motd ${etc}/motd.backup > /dev/null 2>&1
-    cp ${style}/bash.bashrc ${etc}
-    cp ${style}/config.fish ~/.config/fish > /dev/null 2>&1
-    if [ ! -d ${opt} ]; then
-	mkdir -p ${opt}
+function removing() {
+    if [ -x ${bin}/trans ]; then
+	echo -e ${red}"
+[${green}*${red}] ${green}Removing translate-shell..."${white}
+        yes|pkg uninstall translate-shell
+        echo -e ${red}"
+[${green}√${red}] ${green}Removal Completed"${white}
+    else
+	echo -e ${red}"
+[${yellow}!${red}] Not Installed"${white}
     fi
-    cd ${execute}
-    chmod 777 *
-    cd ${intools}
-    chmod 777 *
-    cd ${rmtools}
-    chmod 777 *
-    cd ${settings}/spyexec
-    chmod 777 *
-    cd ${spy}
-    cp ${settings}/spyexec/* ${bin}
-    chmod 777 ${bin}/spy
-    echo -e ${blue}"
-[${white}√${blue}] ${white}Installation Finished, Please Execute:${black}
-
-omf install separation
-omf install bobthefish
-"${white}
-    curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 }
 # ==============================================
 #              Declaring functions
 # ==============================================
-installing
-style
+removing
 # ==============================================
 #    Created by: @Darkmux - WHITE HACKS ©2022
 # ==============================================
