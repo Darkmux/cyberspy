@@ -185,6 +185,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/tmate.sh
     elif [[ "${option}" == "translate" ]]; then
         source ${intools}/translate.sh
+    elif [[ "${option}" == "phonesploit" ]]; then
+        source ${intools}/phonesploit.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -313,6 +315,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/tmate.sh
     elif [[ "${option}" == "translate" ]]; then
         source ${rmtools}/translate.sh
+    elif [[ "${option}" == "phonesploit" ]]; then
+        source ${rmtools}/phonesploit.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -441,6 +445,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/tmate.sh
     elif [[ "${option}" == "translate" ]]; then
         source ${settings}/retools/translate.sh
+    elif [[ "${option}" == "phonesploit" ]]; then
+        source ${settings}/retools/phonesploit.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
