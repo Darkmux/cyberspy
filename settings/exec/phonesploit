@@ -1,1 +1,4 @@
 #!/bin/bash
+phonesploit="/data/data/com.termux/files/usr/opt/PhoneSploit-Pro"
+cd ${phonesploit}
+exec python3 "${phonesploit}/phonesploitpro.py" "$@"

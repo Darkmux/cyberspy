@@ -77,9 +77,8 @@ function installing() {
         yes|pkg install python-cryptography
         python3 -m pip install --upgrade pip
 	git clone https://github.com/AzeemIdrisi/PhoneSploit-Pro ${opt}/PhoneSploit-Pro
-        cd ${opt}/PhoneSploit-Pro
-        chmod 777 phonesploitpro.py
-        ln -s ${opt}/PhoneSploit-Pro/phonesploitpro.py ${bin}/phonesploit
+        cp ${execute}/phonesploit ${bin}
+        chmod 777 ${bin}/phonesploit
         echo -e ${red}"
 [${green}√${red}] ${green}Installation Finished, Please Execute:${white}
 
