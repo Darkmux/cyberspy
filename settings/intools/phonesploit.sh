@@ -76,6 +76,7 @@ function installing() {
         yes|pkg install python3 android-tools git
         yes|pkg install python-cryptography
         python3 -m pip install --upgrade pip
+        spy install metasploit
 	git clone https://github.com/AzeemIdrisi/PhoneSploit-Pro ${opt}/PhoneSploit-Pro
         cp ${execute}/phonesploit ${bin}
         chmod 777 ${bin}/phonesploit
