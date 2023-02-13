@@ -73,8 +73,8 @@ function installing() {
 	echo -e ${red}"
 [${green}*${red}] ${green}Installing shodan..."${white}
         yes|pkg update && pkg upgrade
-        yes|pkg install python3
-        python3 -m pip install --upgrade pip
+        yes|pkg install python
+        yes|pkg install python-pip
 	python3 -m pip install shodan
         echo -e ${red}"
 [${green}√${red}] ${green}Installation Finished, Please Execute:${white}
