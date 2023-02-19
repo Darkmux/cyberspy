@@ -1,0 +1,4 @@
+#!/bin/bash
+chatgpt="/data/data/com.termux/files/usr/opt/chatgpt"
+cd ${chatgpt}
+exec bash "${chatgpt}/chatgpt.sh" "$@"
