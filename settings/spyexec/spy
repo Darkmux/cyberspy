@@ -189,6 +189,8 @@ elif [[ "${argument}" == "install" ]]; then
         source ${intools}/phonesploit.sh
     elif [[ "${option}" == "chatgpt" ]]; then
         source ${intools}/chatgpt.sh
+    elif [[ "${option}" == "transwer" ]]; then
+        source ${intools}/transwer.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -321,6 +323,8 @@ elif [[ "${argument}" == "remove" ]]; then
         source ${rmtools}/phonesploit.sh
     elif [[ "${option}" == "chatgpt" ]]; then
         source ${rmtools}/chatgpt.sh
+    elif [[ "${option}" == "transwer" ]]; then
+        source ${rmtools}/transwer.sh
     else
 	echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi
@@ -453,6 +457,8 @@ elif [[ "${argument}" == "reinstall" ]]; then
         source ${settings}/retools/phonesploit.sh
     elif [[ "${option}" == "chatgpt" ]]; then
         source ${settings}/retools/chatgpt.sh
+    elif [[ "${option}" == "transwer" ]]; then
+        source ${settings}/retools/transwer.sh
     else
         echo -e "${red}[${yellow}!${red}] Invalid Option"${white}
     fi

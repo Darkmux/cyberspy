@@ -1,0 +1,4 @@
+#!/bin/bash
+transwer="/data/data/com.termux/files/usr/opt/transwer"
+cd ${transwer}
+exec bash "${transwer}/transwer.sh" "$@"
