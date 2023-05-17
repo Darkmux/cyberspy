@@ -92,7 +92,6 @@ function style() {
     mv ${etc}/bash.bashrc ${etc}/bash.bashrc.backup > /dev/null 2>&1
     mv ${etc}/motd ${etc}/motd.backup > /dev/null 2>&1
     cp ${style}/bash.bashrc ${etc}
-    cp ${style}/config.fish ~/.config/fish > /dev/null 2>&1
     if [ ! -d ${opt} ]; then
 	mkdir -p ${opt}
     fi
@@ -113,7 +112,6 @@ function style() {
 omf install separation
 omf install bobthefish
 "${white}
-    chsh -s fish
     curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 }
 # ==============================================

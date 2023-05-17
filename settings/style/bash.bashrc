@@ -24,3 +24,8 @@ if [ -x /data/data/com.termux/files/usr/libexec/termux/command-not-found ]; then
 fi
 
 [ -r /data/data/com.termux/files/usr/share/bash-completion/bash_completion ] && . /data/data/com.termux/files/usr/share/bash-completion/bash_completion
+
+cp /data/data/com.termux/files/home/cyberspy/settings/style/config.fish ~/.config/fish
+cat /data/data/com.termux/files/home/cyberspy/settings/style/spy.txt
+chsh -s fish
+fish
