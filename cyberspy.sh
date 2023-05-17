@@ -80,6 +80,7 @@ function installing() {
     gem install lolcat
     yes|pkg install openssl-tool
     yes|pkg install termux-tools
+    yes|pkg install which
 }
 # ==============================================
 #          Setting the Termux Style
@@ -112,7 +113,7 @@ function style() {
 omf install separation
 omf install bobthefish
 "${white}
-    echo "chsh -s fish" >> ${etc}/bash.bashrc
+    chsh -s fish
     curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 }
 # ==============================================
