@@ -112,6 +112,7 @@ function style() {
 omf install separation
 omf install bobthefish
 "${white}
+    chsh -s bash
     curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 }
 # ==============================================
