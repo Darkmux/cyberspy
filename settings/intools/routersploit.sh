@@ -73,7 +73,7 @@ function installing() {
 	echo -e ${red}"
 [${green}*${red}] ${green}Installing routersploit..."${white}
         yes|pkg update && pkg upgrade
-        yes|pkg install python make clang
+        yes|pkg install python make clang rust
         python3 -m pip install --upgrade pip
         yes|pkg install python-cryptography python-bcrypt
         git clone https://github.com/threat9/routersploit ${opt}/routersploit
